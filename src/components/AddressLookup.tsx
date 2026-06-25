@@ -98,7 +98,7 @@ export function AddressLookup({ onLookup, isLoading, error }: AddressLookupProps
       </div>
 
       <h2 className="text-3xl font-black mb-2 tracking-tight" style={{ color: '#1d3557' }}>Ready to Vote?</h2>
-      <p className="text-sm font-medium mb-8 opacity-80" style={{ color: '#457b9d' }}>Here's everything you need to know to make your voice heard this year.</p>
+      <p className="text-sm font-medium mb-8 opacity-80" style={{ color: '#457b9d' }}>Enter your address to find everything you need to know to make your voice heard this year!</p>
       
       <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4 relative">
         <div ref={wrapperRef} className="w-full relative">
