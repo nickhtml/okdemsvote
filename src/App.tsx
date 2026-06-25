@@ -7,7 +7,7 @@ import { VoterPortal } from './components/VoterPortal';
 
 export default function App() {
   return (
-    <div className="flex flex-col h-screen w-full overflow-hidden font-bold" style={{ backgroundColor: '#fdf4e8', fontFamily: "'Century Gothic', CenturyGothic, AppleGothic, sans-serif" }}>
+    <div className="flex flex-col h-[100dvh] w-full overflow-hidden font-bold" style={{ backgroundColor: '#fdf4e8', fontFamily: "'Century Gothic', CenturyGothic, AppleGothic, sans-serif" }}>
       <VoterPortal />
     </div>
   );
