@@ -1,0 +1,6 @@
+{
+  "name": "OKDEMS One-Stop Vote Shop",
+  "description": "A hyper-personalized, mobile-first election hub driven by the Google Civics API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

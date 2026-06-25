@@ -1,0 +1,1241 @@
+{
+  "adair": [
+    {
+      "locationName": "ADAIR COUNTY ELECTION BOARD",
+      "addressLines": [
+        "220 W Division St",
+        "County Courthouse",
+        "Stilwell, OK 74960"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "alfalfa": [
+    {
+      "locationName": "ALFALFA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "602 W 5th St, Ste 3",
+        "Cherokee, OK 73728"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "atoka": [
+    {
+      "locationName": "ATOKA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "200 E Court St, Ste 106E",
+        "County Courthouse",
+        "Atoka, OK 74525"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "beaver": [
+    {
+      "locationName": "BEAVER COUNTY ELECTION BOARD",
+      "addressLines": [
+        "111 W 2nd St",
+        "County Courthouse, Basement",
+        "Beaver, OK 73932"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "beckham": [
+    {
+      "locationName": "Beckham County Activity Center",
+      "addressLines": [
+        "310 E. Main Street",
+        "Sayre, OK 73662"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "blaine": [
+    {
+      "locationName": "BLAINE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "212 N. Weigle",
+        "Watonga, OK 73772"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "bryan": [
+    {
+      "locationName": "BRYAN COUNTY ELECTION BOARD",
+      "addressLines": [
+        "402 W Evergreen St, Ste A-2",
+        "Durant, OK 74701"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "caddo": [
+    {
+      "locationName": "Caddo County Courthouse",
+      "addressLines": [
+        "110 SW 2nd St, Ste 106",
+        "Anadarko, OK 73005"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "canadian": [
+    {
+      "locationName": "CANADIAN COUNTY ELECTION BOARD",
+      "addressLines": [
+        "200 S Bickford Ave",
+        "El Reno, OK 73036"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "CANADIAN VALLEY TECHNOLOGY CENTER COWAN CAMPUS",
+      "addressLines": [
+        "1701 S CZECH HALL RD",
+        "YUKON, OK 73099"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "carter": [
+    {
+      "locationName": "HERITAGE HALL",
+      "addressLines": [
+        "220 WEST BROADWAY",
+        "ARDMORE, OK 73401"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "cherokee": [
+    {
+      "locationName": "CHEROKEE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "914 S College Ave",
+        "Tahlequah, OK 74464"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "choctaw": [
+    {
+      "locationName": "Courthouse",
+      "addressLines": [
+        "300 E Duke St.",
+        "Hugo",
+        "Ok., OK 74743"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "cimarron": [
+    {
+      "locationName": "CIMARRON COUNTY ELECTION BOARD",
+      "addressLines": [
+        "County Courthouse, Basement",
+        "Boise City, OK 73933"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "cleveland": [
+    {
+      "locationName": "AST RESOURCE CENTER",
+      "addressLines": [
+        "1970 156TH AVE NE",
+        "NORMAN, OK 73026"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "CLEVELAND COUNTY FAIRGROUNDS",
+      "addressLines": [
+        "615 E ROBINSON ST.",
+        "NORMAN, OK 73072"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "MNTC SOUTH PENN CAMPUS",
+      "addressLines": [
+        "13301 S PENN",
+        "OKLAHOMA CITY, OK 73170"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "MOORE PUBLIC LIBRARY",
+      "addressLines": [
+        "225 S HOWARD",
+        "MOORE, OK 73160"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "NOBLE PUBLIC LIBRARY",
+      "addressLines": [
+        "204 N 5TH ST",
+        "NOBLE, OK 73068"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "SOONER MALL",
+      "addressLines": [
+        "3301 W MAIN STREET",
+        "NORMAN, OK OK"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "coal": [
+    {
+      "locationName": "COAL COUNTY ELECTION BOARD",
+      "addressLines": [
+        "5 W Clay St",
+        "Coalgate, OK 74538"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "comanche": [
+    {
+      "locationName": "COMANCHE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "315 SW 5th St, Rm 206",
+        "County Courthouse",
+        "Lawton, OK 73501"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "cotton": [
+    {
+      "locationName": "COTTON COUNTY ELECTION BOARD",
+      "addressLines": [
+        "301 N Broadway St, Rm 2",
+        "Walters, OK 73572"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "craig": [
+    {
+      "locationName": "CRAIG COUNTY ELECTION BOARD",
+      "addressLines": [
+        "210 W Delaware Ave, Ste 108",
+        "Vinita, OK 74301"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "creek": [
+    {
+      "locationName": "CREEK COUNTY ELECTION BOARD",
+      "addressLines": [
+        "230 E Hobson Ave",
+        "Sapulpa, OK 74066"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "custer": [
+    {
+      "locationName": "CUSTER COUNTY ELECTION BOARD",
+      "addressLines": [
+        "633 N 6th St",
+        "Clinton, OK 73601"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "delaware": [
+    {
+      "locationName": "DELAWARE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "225 S 5th St",
+        "Jay, OK 74346"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "dewey": [
+    {
+      "locationName": "DEWEY COUNTY ELECTION BOARD",
+      "addressLines": [
+        "213 S Broadway St",
+        "County Courthouse",
+        "Taloga, OK 73667"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "ellis": [
+    {
+      "locationName": "ELLIS COUNTY ELECTION BOARD",
+      "addressLines": [
+        "100 S Washington St",
+        "County Courthouse, Basement",
+        "Arnett, OK 73832"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "garfield": [
+    {
+      "locationName": "GARFIELD COUNTY ELECTION BOARD",
+      "addressLines": [
+        "903 Failing Dr",
+        "Enid, OK 73701"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "garvin": [
+    {
+      "locationName": "GARVIN COUNTY ELECTION BOARD",
+      "addressLines": [
+        "201 W Grant Ave, Rm 8",
+        "County Courthouse, 1st Floor",
+        "Pauls Valley, OK 73075"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "grady": [
+    {
+      "locationName": "GRADY COUNTY ELECTION BOARD",
+      "addressLines": [
+        "315 W Pennsylvania Ave",
+        "Chickasha, OK 73018"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "grant": [
+    {
+      "locationName": "GRANT COUNTY ELECTION BOARD",
+      "addressLines": [
+        "112 E Guthrie St, Ste 301A",
+        "County Courthouse",
+        "Medford, OK 73759"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "greer": [
+    {
+      "locationName": "GREER COUNTY ELECTION BOARD",
+      "addressLines": [
+        "106 E Jefferson St, Rm 1",
+        "County Courthouse, 1st Floor",
+        "Mangum, OK 73554"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "harmon": [
+    {
+      "locationName": "HARMON COUNTY ELECTION BOARD",
+      "addressLines": [
+        "114 W Hollis St, Fl 2 Rm 5",
+        "County Courthouse",
+        "Hollis, OK 73550"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "harper": [
+    {
+      "locationName": "HARPER COUNTY ELECTION BOARD",
+      "addressLines": [
+        "311 SE 1st St",
+        "County Courthouse, 2nd Floor",
+        "Buffalo, OK 73834"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "haskell": [
+    {
+      "locationName": "HASKELL COUNTY ELECTION BOARD",
+      "addressLines": [
+        "202 E Main ST STE 1",
+        "Stigler, OK 74462"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "hughes": [
+    {
+      "locationName": "HUGHES COUNTY ELECTION BOARD",
+      "addressLines": [
+        "200 N Broadway St, Ste 3",
+        "County Courthouse",
+        "Holdenville, OK 74848"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "jackson": [
+    {
+      "locationName": "Altus Community Center",
+      "addressLines": [
+        "401 Falcon",
+        "Altus, OK 73521"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "jefferson": [
+    {
+      "locationName": "County Courthouse",
+      "addressLines": [
+        "220 N Main St. Room 205",
+        "Waurika, OK 73573"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "johnston": [
+    {
+      "locationName": "Johnston County Commissioner's Office",
+      "addressLines": [
+        "705 W. Main St",
+        "Tishomingo, OK 73460"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "kay": [
+    {
+      "locationName": "KAY COUNTY ELECTION BOARD",
+      "addressLines": [
+        "219 S Main St",
+        "Administration Building",
+        "Newkirk, OK 74647"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "kingfisher": [
+    {
+      "locationName": "MACenter Building",
+      "addressLines": [
+        "300 S 13th St",
+        "Kingfisher County Fairgrounds",
+        "Kingfisher, OK 73750"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "kiowa": [
+    {
+      "locationName": "KIOWA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "215 N Lincoln St",
+        "Hobart, OK 73651"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "latimer": [
+    {
+      "locationName": "LATIMER COUNTY ELECTION BOARD",
+      "addressLines": [
+        "109 N Central St, Ste 102",
+        "County Courthouse",
+        "Wilburton, OK 74578"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "leflore": [
+    {
+      "locationName": "LEFLORE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "103 N Church St",
+        "Poteau, OK 74953"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "lincoln": [
+    {
+      "locationName": "LINCOLN COUNTY ELECTION BOARD",
+      "addressLines": [
+        "811 Manvel Ave, Ste 15",
+        "County Courthouse",
+        "Chandler, OK 74834"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "logan": [
+    {
+      "locationName": "Logan CEB Early Voting Area",
+      "addressLines": [
+        "219 S Broad St",
+        "Guthrie, OK 73044"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "love": [
+    {
+      "locationName": "LOVE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "405 W Main St, Ste 103",
+        "County Courthouse",
+        "Marietta, OK 73448"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "major": [
+    {
+      "locationName": "Major County Fairgrounds",
+      "addressLines": [
+        "808 E. Highland St.",
+        "Fairview, OK 73737"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "marshall": [
+    {
+      "locationName": "County Courthouse",
+      "addressLines": [
+        "100 Plaza Room 107",
+        "Madill, OK 73446"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "mayes": [
+    {
+      "locationName": "MAYES COUNTY ELECTION BOARD",
+      "addressLines": [
+        "1 Court Pl, Ste 130",
+        "County Courthouse",
+        "Pryor, OK 74361"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "mcclain": [
+    {
+      "locationName": "HISTORICAL CITY HALL",
+      "addressLines": [
+        "114 W BROADWAY ST",
+        "BLANCHARD, OK OK 73010"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "McClain County Community Building",
+      "addressLines": [
+        "1721 Hardcastle Blvd",
+        "Purcell, OK 73080"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "mccurtain": [
+    {
+      "locationName": "MCCURTAIN COUNTY ELECTION BOARD",
+      "addressLines": [
+        "104 N Central Ave",
+        "Idabel, OK 74745"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "mcintosh": [
+    {
+      "locationName": "MCINTOSH COUNTY ELECTION BOARD",
+      "addressLines": [
+        "110 N 1st St, Ste 101",
+        "County Courthouse, 1st Floor",
+        "Eufaula, OK 74432"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "murray": [
+    {
+      "locationName": "Murray County Expo",
+      "addressLines": [
+        "3490 W Hwy 7",
+        "Sulphur, OK 73086"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "muskogee": [
+    {
+      "locationName": "MUSKOGEE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "400 W Broadway St, Ste 120",
+        "Muskogee, OK 74401"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "noble": [
+    {
+      "locationName": "NOBLE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "300 Courthouse Dr",
+        "County Courthouse, 1st Floor",
+        "Perry, OK 73077"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "nowata": [
+    {
+      "locationName": "NOWATA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "228 N Maple St",
+        "Nowata, OK 74048"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "okfuskee": [
+    {
+      "locationName": "OKFUSKEE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "209 N 3rd St",
+        "County Courthouse, 1st Floor",
+        "Okemah, OK 74859"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "oklahoma": [
+    {
+      "locationName": "OKLAHOMA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "4201 N Lincoln Blvd",
+        "Oklahoma City, OK 73105"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "okmulgee": [
+    {
+      "locationName": "OKMULGEE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "314 W 7th St, Ste 102",
+        "County Courthouse",
+        "Okmulgee, OK 74447"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "osage": [
+    {
+      "locationName": "FIRST BAPTIST CHURCH WEST ROGERS CAMPUS",
+      "addressLines": [
+        "825 W ROGERS BLVD",
+        "SKIATOOK, OK 74070"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "OSAGE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "630 Kihekah Ave",
+        "Pawhuska, OK 74056"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "ottawa": [
+    {
+      "locationName": "Community Room",
+      "addressLines": [
+        "123 E Central AVE",
+        "Courthouse Annex",
+        "Miami, OK 74354"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "pawnee": [
+    {
+      "locationName": "PAWNEE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "500 Harrison St, Rm 101",
+        "County Courthouse",
+        "Pawnee, OK 74058"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "payne": [
+    {
+      "locationName": "Payne County Expo",
+      "addressLines": [
+        "4518 Expo Cir E",
+        "Community Building",
+        "Stillwater, OK 74075"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "pittsburg": [
+    {
+      "locationName": "PITTSBURG COUNTY ELECTION BOARD",
+      "addressLines": [
+        "1609 N. Strong Blvd, Ste 200",
+        "McAlester, OK 74501"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "pontotoc": [
+    {
+      "locationName": "PONTOTOC COUNTY ELECTION BOARD",
+      "addressLines": [
+        "131 W 13th St",
+        "Ada, OK 74820"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "pottawatomie": [
+    {
+      "locationName": "POTTAWATOMIE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "330 N Broadway Ave",
+        "Shawnee, OK 74801"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "pushmataha": [
+    {
+      "locationName": "PUSHMATAHA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "204 SW 4th St, Ste A",
+        "Antlers, OK 74523"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "roger mills": [
+    {
+      "locationName": "ROGER MILLS COUNTY ELECTION BOARD",
+      "addressLines": [
+        "500 E Broadway",
+        "County Courthouse, 1st Floor",
+        "Cheyenne, OK 73628"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "rogers": [
+    {
+      "locationName": "CENTRAL BAPTIST CHURCH",
+      "addressLines": [
+        "9001 N 145TH E AVE",
+        "OWASSO, OK OK"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "ROGERS COUNTY ELECTION BOARD",
+      "addressLines": [
+        "415 W 1st St",
+        "Claremore, OK 74017"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "seminole": [
+    {
+      "locationName": "SEMINOLE COUNTY ELECTION BOARD",
+      "addressLines": [
+        "200 S BROWN",
+        "Wewoka, OK 74884"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "sequoyah": [
+    {
+      "locationName": "SEQUOYAH COUNTY ELECTION BOARD",
+      "addressLines": [
+        "110 E Creek Ave",
+        "Sallisaw, OK 74955"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "stephens": [
+    {
+      "locationName": "STEPHENS COUNTY ELECTION BOARD",
+      "addressLines": [
+        "1017 West Elm Ave",
+        "Duncan, OK 73533-4746"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "texas": [
+    {
+      "locationName": "TEXAS COUNTY ELECTION BOARD",
+      "addressLines": [
+        "301 N Main St",
+        "Courthouse Annex",
+        "Guymon, OK 73942"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "tillman": [
+    {
+      "locationName": "TILLMAN COUNTY ELECTION BOARD",
+      "addressLines": [
+        "201 N Main St, Rm 5",
+        "County Courthouse, 1st Floor",
+        "Frederick, OK 73542"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "tulsa": [
+    {
+      "locationName": "T.T.C. - BROKEN ARROW",
+      "addressLines": [
+        "4600 SOUTH OLIVE AVENUE",
+        "BROKEN ARROW, OK 74011"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "TULSA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "12000 E Skelly Dr",
+        "Tulsa, OK 74128"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "wagoner": [
+    {
+      "locationName": "FIRST BAPTIST CHURCH WAGONER",
+      "addressLines": [
+        "401 NE 2ND",
+        "WAGONER, OK 74467"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    },
+    {
+      "locationName": "NORTHEASTERN STATE UNIVERSITY-BA",
+      "addressLines": [
+        "3100 E NEW ORLEANS ST",
+        "BROKEN ARROW, OK 74014"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "washington": [
+    {
+      "locationName": "WASHINGTON COUNTY ELECTION BOARD",
+      "addressLines": [
+        "401 S Johnstone Ave, Ste 4",
+        "Bartlesville, OK 74003"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "washita": [
+    {
+      "locationName": "WASHITA COUNTY ELECTION BOARD",
+      "addressLines": [
+        "111 E Main St",
+        "Cordell, OK 73632"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "woods": [
+    {
+      "locationName": "WOODS COUNTY ELECTION BOARD",
+      "addressLines": [
+        "427 Barnes Ave Ste 2",
+        "Alva, OK 73717"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ],
+  "woodward": [
+    {
+      "locationName": "WOODWARD COUNTY ELECTION BOARD",
+      "addressLines": [
+        "1600 Main, Ste. 2",
+        "Woodward, OK 73801"
+      ],
+      "dates": [
+        "Thu., Aug. 20 - 8:00 am - 6:00 pm",
+        "Fri., Aug. 21 - 8:00 am - 6:00 pm",
+        "Sat., Aug. 22 - 8:00 am - 2:00 pm"
+      ]
+    }
+  ]
+}
