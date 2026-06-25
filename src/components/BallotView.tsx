@@ -111,22 +111,22 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
 
   return (
     <div 
-      className={cn(
-        "flex flex-col p-4 md:p-6 bg-white relative group transition-all duration-300 cursor-pointer",
-        "hover:-translate-y-2 hover:shadow-xl hover:bg-[#1d3557]",
-        isExpanded ? "-translate-y-2 shadow-xl bg-[#1d3557]" : ""
-      )}
+      className={`flex flex-col p-4 md:p-6 relative group transition-all duration-300 cursor-pointer ${
+        isExpanded 
+          ? "bg-[#1d3557] -translate-y-2 shadow-xl" 
+          : "bg-white hover:-translate-y-2 hover:shadow-xl hover:bg-[#1d3557]"
+      }`}
       onClick={() => setIsExpanded(!isExpanded)}
     >
       
       <div className="flex gap-4 md:gap-6 items-start">
         {/* Photo */}
         <div 
-          className={cn(
-            "w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center font-bold text-3xl text-white overflow-hidden bg-cover bg-center border-2 border-black transition-all duration-300",
-            "group-hover:border-[#e63946] group-hover:ring-4 group-hover:ring-[#e63946]/50 group-hover:scale-105",
-            isExpanded ? "border-[#e63946] ring-4 ring-[#e63946]/50 scale-105" : ""
-          )}
+          className={`w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center font-bold text-3xl text-white overflow-hidden bg-cover bg-center border-2 transition-all duration-300 ${
+            isExpanded 
+              ? "border-[#e63946] ring-4 ring-[#e63946]/50 scale-105" 
+              : "border-black group-hover:border-[#e63946] group-hover:ring-4 group-hover:ring-[#e63946]/50 group-hover:scale-105"
+          }`}
           style={{ 
             backgroundColor: '#1d3557',
             backgroundImage: candidate.photoUrl ? `url(${candidate.photoUrl})` : 'none'
@@ -138,20 +138,18 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
         {/* Info */}
         <div className="flex-1 min-w-0 flex flex-col justify-center h-24 md:h-32">
           {isStatewide && (
-            <p className={cn(
-              "text-xs md:text-sm font-bold uppercase tracking-widest text-slate-500 mb-1 transition-colors",
-              "group-hover:text-[#a8dadc]",
-              isExpanded ? "text-[#a8dadc]" : ""
-            )}>
+            <p className={`text-xs md:text-sm font-bold uppercase tracking-widest mb-1 transition-colors ${
+              isExpanded ? "text-[#a8dadc]" : "text-slate-500 group-hover:text-[#a8dadc]"
+            }`}>
               {candidate.district}
             </p>
           )}
           <div className="flex justify-between items-center gap-2">
-            <h3 className={cn(
-              "text-2xl md:text-4xl font-black uppercase tracking-tighter text-black transition-all duration-300 origin-left",
-              "group-hover:text-white group-hover:translate-x-2 group-hover:scale-[1.02]",
-              isExpanded ? "text-white translate-x-2 scale-[1.02]" : ""
-            )}>
+            <h3 className={`text-2xl md:text-4xl font-black uppercase tracking-tighter transition-all duration-300 origin-left ${
+              isExpanded 
+                ? "text-white translate-x-2 scale-[1.02]" 
+                : "text-black group-hover:text-white group-hover:translate-x-2 group-hover:scale-[1.02]"
+            }`}>
               {cleanName}
             </h3>
             
@@ -221,27 +219,25 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
       </div>
       
       {/* Expanded Links (Shown on hover/tap) */}
-      <div className={cn(
-        "overflow-hidden transition-all duration-300",
-        "max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 group-hover:mt-6",
-        isExpanded ? "max-h-32 opacity-100 mt-6" : ""
-      )}>
-        <div className={cn(
-          "pt-4 border-t-2 flex gap-4 transition-colors",
-          "border-slate-200 group-hover:border-[#a8dadc]/30",
-          isExpanded ? "border-[#a8dadc]/30" : ""
-        )}>
+      <div className={`overflow-hidden transition-all duration-300 ${
+        isExpanded 
+          ? "max-h-32 opacity-100 mt-6" 
+          : "max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 group-hover:mt-6"
+      }`}>
+        <div className={`pt-4 border-t-2 flex gap-4 transition-colors ${
+          isExpanded ? "border-[#a8dadc]/30" : "border-slate-200 group-hover:border-[#a8dadc]/30"
+        }`}>
           {hasWebsite && (
             <a 
               href={candidate.website} 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className={cn(
-                "px-4 py-2 font-black text-xs md:text-sm uppercase tracking-widest border-2 transition-all duration-300 hover:scale-105 active:scale-95",
-                "border-black text-black group-hover:border-white group-hover:text-white hover:!bg-[#e63946] hover:!border-[#e63946] hover:!text-white",
-                isExpanded ? "border-white text-white" : ""
-              )}
+              className={`px-4 py-2 font-black text-xs md:text-sm uppercase tracking-widest border-2 transition-all duration-300 hover:scale-105 active:scale-95 hover:!bg-[#e63946] hover:!border-[#e63946] hover:!text-white ${
+                isExpanded 
+                  ? "border-white text-white" 
+                  : "border-black text-black group-hover:border-white group-hover:text-white"
+              }`}
             >
               Website
             </a>
