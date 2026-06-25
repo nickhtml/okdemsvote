@@ -492,22 +492,10 @@ export const candidates = [
     "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/9b639cc0-df95-4c09-8dc6-e7a6229f278e/9b639cc0-df95-4c09-8dc6-e7a6229f278e.jpg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=1584%2C954%2C1814%2C1814&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
   },
   {
-    "name": "Braxton Banks",
-    "district": "District 85",
-    "website": "https://braxtonbanks.com/",
-    "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/9b906331-e4ca-482d-a439-39a3de42c5c7/9b906331-e4ca-482d-a439-39a3de42c5c7.jpeg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C0%2C1981%2C1981&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
-  },
-  {
     "name": "Chelsey Branham",
     "district": "District 85",
     "website": "https://www.facebook.com/branhamforhouse/",
     "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/91c4e272-a9b8-4278-9ff5-62d3c7d02433/91c4e272-a9b8-4278-9ff5-62d3c7d02433.jpeg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C0%2C960%2C960&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
-  },
-  {
-    "name": "Estefania Gruenstein",
-    "district": "District 85",
-    "website": "https://estefaniaforok.com/",
-    "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/b3678443-44e7-4317-bfe4-1db6491a78f0/b3678443-44e7-4317-bfe4-1db6491a78f0.jpg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=1347%2C442%2C4454%2C4456&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
   },
   {
     "name": "Hannah Cole",
@@ -586,12 +574,6 @@ export const candidates = [
     "district": "District 98",
     "website": "https://www.cathysmythe.com",
     "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/07101aa1-e13f-4ef0-9e41-4a87d5062a8e/07101aa1-e13f-4ef0-9e41-4a87d5062a8e.jpg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=343%2C29%2C3795%2C3795&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
-  },
-  {
-    "name": "Alan Washington",
-    "district": "District 99",
-    "website": "https://www.washingtonforhd99.com/",
-    "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/a18159e3-3729-48b3-a0e9-e90de0ece183/a18159e3-3729-48b3-a0e9-e90de0ece183.png?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C0%2C304%2C304&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
   },
   {
     "name": "Herschel Brown",

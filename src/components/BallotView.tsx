@@ -218,11 +218,11 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
         </div>
       </div>
       
-      {/* Expanded Links (Shown on hover/tap) */}
+      {/* Expanded Links (Always shown on mobile, hover/tap on desktop) */}
       <div className={`overflow-hidden transition-all duration-300 ${
         isExpanded 
-          ? "max-h-32 opacity-100 mt-6" 
-          : "max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 group-hover:mt-6"
+          ? "max-h-32 opacity-100 mt-4 md:mt-6" 
+          : "max-h-32 opacity-100 mt-4 md:mt-0 md:max-h-0 md:opacity-0 md:group-hover:max-h-32 md:group-hover:opacity-100 md:group-hover:mt-6"
       }`}>
         <div className={`pt-4 border-t-2 flex gap-4 transition-colors ${
           isExpanded ? "border-[#a8dadc]/30" : "border-slate-200 group-hover:border-[#a8dadc]/30"
