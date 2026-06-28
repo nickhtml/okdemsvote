@@ -7,9 +7,10 @@ interface AddressLookupProps {
   onLookup: (address: string) => void;
   isLoading: boolean;
   error: string | null;
+  onRegisterClick?: () => void;
 }
 
-export function AddressLookup({ onLookup, isLoading, error }: AddressLookupProps) {
+export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: AddressLookupProps) {
   const [address, setAddress] = useState('');
   const [predictions, setPredictions] = useState<any[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -158,14 +159,29 @@ export function AddressLookup({ onLookup, isLoading, error }: AddressLookupProps
           type="submit"
           disabled={isLoading}
           className={cn(
-            "w-full py-4 rounded-lg font-black text-white uppercase tracking-wider text-lg shadow-lg transition-transform active:scale-[0.98] relative z-10",
-            isLoading ? "opacity-70 cursor-not-allowed" : "hover:opacity-90"
+            "w-full py-4 rounded-lg font-black text-white uppercase tracking-wider text-lg shadow-lg relative z-10 transition-all duration-300",
+            "group overflow-hidden",
+            isLoading ? "opacity-70 cursor-not-allowed" : "hover:scale-[1.02] hover:shadow-xl active:scale-[0.98]"
           )}
           style={{ backgroundColor: '#1d3557' }}
         >
+          <span className={cn(
+            "absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none ring-4 ring-[#e63946] ring-offset-2 ring-offset-[#1d3557]",
+            !isLoading && "group-hover:opacity-100 group-hover:animate-pulse"
+          )}></span>
           {isLoading ? 'Searching...' : "Let's do this"}
         </button>
       </form>
+
+      {onRegisterClick && (
+        <button 
+          onClick={onRegisterClick}
+          className="mt-6 text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
+          style={{ color: '#e63946' }}
+        >
+          Not registered to vote? Register today!
+        </button>
+      )}
     </div>
   );
 }

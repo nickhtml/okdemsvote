@@ -1,9 +1,12 @@
 import { useState, useRef } from 'react';
+import { Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
 import { VoterInfo } from '../types';
 import { IdAccordion } from './IdAccordion';
 import { PollingPlaceCard } from './PollingPlaceCard';
 import { BallotView } from './BallotView';
 import { AddressLookup } from './AddressLookup';
+import { RegisterToVote } from './RegisterToVote';
+import { LoadingSkeleton } from './LoadingSkeleton';
 
 export function VoterPortal() {
   const [voterInfo, setVoterInfo] = useState<VoterInfo | null>(null);
@@ -12,6 +15,10 @@ export function VoterPortal() {
   const [showAlert, setShowAlert] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const lastScrollTop = useRef(0);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isRegisterPage = location.pathname === '/register';
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const currentScrollTop = e.currentTarget.scrollTop;
@@ -44,6 +51,8 @@ export function VoterPortal() {
         throw new Error(data.error);
       }
       setVoterInfo(data);
+      // Ensure we are on the main page to see the results
+      if (isRegisterPage) navigate('/');
     } catch (err: any) {
       setError(err.message || 'An error occurred during lookup.');
     } finally {
@@ -64,8 +73,8 @@ export function VoterPortal() {
           </button>
         </div>
       )}
-      <header className={`flex flex-col md:flex-row items-center justify-between px-8 shrink-0 shadow-md z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`} style={{ backgroundColor: '#1d3557', color: '#f1faee' }}>
-        <a href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80 cursor-pointer">
+      <header className={`flex flex-col md:flex-row items-center px-8 shrink-0 shadow-md z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'} ${isRegisterPage ? 'justify-center' : 'justify-between'}`} style={{ backgroundColor: '#1d3557', color: '#f1faee' }}>
+        <Link to="/" className={`flex items-center gap-3 transition-opacity hover:opacity-80 cursor-pointer ${isRegisterPage ? 'mx-auto' : ''}`}>
           <img src="/okdems_votes.png" alt="OKDEMS VOTES" className={`transition-all duration-300 ${isScrolled ? 'h-8 md:h-12' : 'h-12 md:h-16'}`} onError={(e) => {
             e.currentTarget.style.display = 'none';
             if (e.currentTarget.nextElementSibling) {
@@ -73,39 +82,65 @@ export function VoterPortal() {
             }
           }} />
           <h1 className="text-2xl font-black tracking-tight uppercase hidden" style={{ fontFamily: 'var(--font-sans)', fontWeight: 900 }}>OKDEMS VOTES</h1>
-        </a>
-        <div className="flex items-center gap-6 mt-4 md:mt-0">
-          {voterInfo ? (
-            <div className="text-right">
-              <p className="text-lg md:text-xl font-black uppercase">
-                Hey, {voterInfo.normalizedInput?.city || 'Oklahoma'} voter! :)
-              </p>
-            </div>
-          ) : (
-            <div className="text-right">
-              <p className="text-sm font-bold opacity-80 uppercase">Enter Address Below</p>
-            </div>
-          )}
-        </div>
+        </Link>
+        {!isRegisterPage && (
+          <div className="flex items-center gap-6 mt-4 md:mt-0">
+            {voterInfo ? (
+              <div className="text-right">
+                <p className="text-lg md:text-xl font-black uppercase">
+                  Hey, {voterInfo.normalizedInput?.city || 'Oklahoma'} voter! :)
+                </p>
+              </div>
+            ) : (
+              <div className="text-right">
+                <p className="text-sm font-bold opacity-80 uppercase">Enter Address Below</p>
+              </div>
+            )}
+          </div>
+        )}
       </header>
 
       <div className="flex-1 overflow-y-auto z-0 p-4 md:p-8 flex flex-col justify-between" onScroll={handleScroll}>
         <div className="max-w-3xl mx-auto w-full flex flex-col gap-8 pb-12">
-          {!voterInfo ? (
-            <div className="flex items-center justify-center pt-12">
-              <AddressLookup onLookup={handleLookup} isLoading={isLoading} error={error} />
-            </div>
-          ) : (
-            <>
-              <section className="w-full flex flex-col gap-4">
-                <PollingPlaceCard voterInfo={voterInfo} />
-              </section>
-              
-              <section className="w-full flex flex-col gap-4">
-                <BallotView voterInfo={voterInfo} />
-              </section>
-            </>
-          )}
+          <Routes>
+            <Route path="/" element={
+              !voterInfo ? (
+                <div className="w-full pt-4 md:pt-12">
+                  <div className={isLoading ? "hidden" : "flex items-center justify-center"}>
+                    <AddressLookup onLookup={handleLookup} isLoading={isLoading} error={error} onRegisterClick={() => navigate('/register')} />
+                  </div>
+                  {isLoading && (
+                    <LoadingSkeleton />
+                  )}
+                </div>
+              ) : (
+                <>
+                  <section className="w-full flex flex-col gap-4">
+                    <PollingPlaceCard voterInfo={voterInfo} />
+                  </section>
+                  
+                  <section className="w-full flex flex-col gap-4">
+                    <BallotView voterInfo={voterInfo} />
+                  </section>
+                  
+                  <section className="w-full flex flex-col items-center justify-center mt-8">
+                    <button 
+                      onClick={() => navigate('/register')}
+                      className="text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
+                      style={{ color: '#e63946' }}
+                    >
+                      Not registered to vote? Register today!
+                    </button>
+                  </section>
+                </>
+              )
+            } />
+            <Route path="/register" element={
+              <div className="w-full pt-4 md:pt-8">
+                <RegisterToVote />
+              </div>
+            } />
+          </Routes>
         </div>
 
         <footer className="w-full mt-auto py-6 px-4 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest border-t border-[#a8dadc]/30" style={{ color: '#1d3557' }}>
