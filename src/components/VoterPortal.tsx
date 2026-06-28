@@ -74,7 +74,7 @@ export function VoterPortal() {
         </div>
       )}
       <header className={`flex flex-col md:flex-row items-center px-8 shrink-0 shadow-md z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'} ${isRegisterPage ? 'justify-center' : 'justify-between'}`} style={{ backgroundColor: '#1d3557', color: '#f1faee' }}>
-        <Link to="/" className={`flex items-center gap-3 transition-opacity hover:opacity-80 cursor-pointer ${isRegisterPage ? 'mx-auto' : ''}`}>
+        <Link to="/" onClick={() => { setVoterInfo(null); setError(null); }} className={`flex items-center gap-3 transition-opacity hover:opacity-80 cursor-pointer ${isRegisterPage ? 'mx-auto' : ''}`}>
           <img src="/okdems_votes.png" alt="OKDEMS VOTES" className={`transition-all duration-300 ${isScrolled ? 'h-8 md:h-12' : 'h-12 md:h-16'}`} onError={(e) => {
             e.currentTarget.style.display = 'none';
             if (e.currentTarget.nextElementSibling) {
