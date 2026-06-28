@@ -166,7 +166,7 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
           style={{ backgroundColor: '#1d3557' }}
         >
           <span className={cn(
-            "absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none ring-4 ring-[#e63946] ring-offset-2 ring-offset-[#1d3557]",
+            "absolute inset-0 border-4 rounded-lg transition-all duration-300 pointer-events-none opacity-0 ring-4 ring-[#1fb976] ring-offset-2 ring-offset-white",
             !isLoading && "group-hover:opacity-100 group-hover:animate-pulse"
           )}></span>
           {isLoading ? 'Searching...' : "Let's do this"}
@@ -179,7 +179,7 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
           className="mt-6 text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
           style={{ color: '#e63946' }}
         >
-          Not registered to vote? Register today!
+          Not registered to vote? <br />Register today!
         </button>
       )}
     </div>

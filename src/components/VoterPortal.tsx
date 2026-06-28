@@ -101,11 +101,11 @@ export function VoterPortal() {
       </header>
 
       <div className="flex-1 overflow-y-auto z-0 p-4 md:p-8 flex flex-col justify-between" onScroll={handleScroll}>
-        <div className="max-w-3xl mx-auto w-full flex flex-col gap-8 pb-12">
+        <div className="max-w-3xl mx-auto w-full flex flex-col gap-6 pb-4">
           <Routes>
             <Route path="/" element={
               !voterInfo ? (
-                <div className="w-full pt-4 md:pt-12">
+                <div className="w-full pt-4 md:pt-6">
                   <div className={isLoading ? "hidden" : "flex items-center justify-center"}>
                     <AddressLookup onLookup={handleLookup} isLoading={isLoading} error={error} onRegisterClick={() => navigate('/register')} />
                   </div>
@@ -129,7 +129,7 @@ export function VoterPortal() {
                       className="text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
                       style={{ color: '#e63946' }}
                     >
-                      Not registered to vote? Register today!
+                      Not registered to vote? <br />Register today!
                     </button>
                   </section>
                 </>
