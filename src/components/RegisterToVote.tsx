@@ -195,7 +195,7 @@ export function RegisterToVote() {
             </p>
             <div className="inline-block bg-white border-2 p-4 mt-2" style={{ borderColor: '#1d3557' }}>
               <p className="text-sm md:text-base font-semibold" style={{ color: '#1d3557' }}>
-                To register for the August 25 Elections (July 31 deadline), you must be born on or before <span className="font-black text-[#e63946]">July 31, 2008</span>.
+                To register for the August 25th elections, you must be born on or before <span className="font-black text-[#e63946]">July 31, 2008</span>.
               </p>
               <p className="text-sm font-semibold opacity-80 mt-2" style={{ color: '#1d3557' }}>
                 This means you can register once you turn 17 ½ on <span className="font-bold">January 31, 2026</span>!
