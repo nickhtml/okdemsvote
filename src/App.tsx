@@ -4,6 +4,7 @@
  */
 
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { VoterPortal } from './components/VoterPortal';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <div className="flex flex-col h-[100dvh] w-full overflow-hidden font-bold" style={{ backgroundColor: '#fdf4e8', fontFamily: "'Century Gothic', CenturyGothic, AppleGothic, sans-serif" }}>
         <VoterPortal />
       </div>
+      <Analytics />
     </Router>
   );
 }
