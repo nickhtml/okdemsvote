@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
 import { VoterInfo } from '../types';
 import { IdAccordion } from './IdAccordion';
