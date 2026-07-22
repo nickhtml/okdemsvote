@@ -63,7 +63,7 @@ export function VoterPortal() {
   return (
     <>
       {showAlert && (
-        <div className="w-full bg-[#e63946] text-white py-2 px-2 md:px-4 flex justify-between items-center z-20 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider relative">
+        <div className="w-full bg-[#457b9d] text-white py-2 px-2 md:px-4 flex justify-between items-center z-20 text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-wider relative">
           <div className="flex-1 text-center pr-6 overflow-hidden whitespace-nowrap text-ellipsis">
             <span className="font-black mr-1 md:mr-2">ELECTION ALERT:</span> 
             Oklahoma Primary Runoff is August 25, 2026!
@@ -127,7 +127,7 @@ export function VoterPortal() {
                     <button 
                       onClick={() => navigate('/register')}
                       className="text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
-                      style={{ color: '#e63946' }}
+                      style={{ color: '#457b9d' }}
                     >
                       Not registered to vote? <br />Register today!
                     </button>
@@ -149,7 +149,7 @@ export function VoterPortal() {
             <a href="mailto:digitools@okdemocrats.org" className="hover:underline" style={{ color: '#457b9d' }}>Report Issue</a>
             <a href="https://www.okdemocrats.org/Terms-Policies" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#457b9d' }}>Privacy Policy</a>
           </div>
-          <span className="text-center md:text-right" style={{ color: '#e63946' }}>An OKDEMS Digital Experience</span>
+          <span className="text-center md:text-right" style={{ color: '#457b9d' }}>An OKDEMS Digital Experience</span>
         </footer>
       </div>
     </>

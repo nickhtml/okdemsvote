@@ -60,14 +60,14 @@ export function PollingPlaceCard({ voterInfo }: PollingPlaceCardProps) {
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-black uppercase tracking-tight" style={{ color: '#1d3557' }}>Where Do I Vote?</h2>
             {isPollsOpen() ? (
-              <span className="px-3 py-1 text-xs font-black rounded uppercase shadow-sm bg-[#e63946] text-[#f1faee]">OPEN</span>
+              <span className="px-3 py-1 text-xs font-black rounded uppercase shadow-sm bg-[#457b9d] text-white">OPEN</span>
             ) : (
               <span className="px-3 py-1 text-xs font-black rounded uppercase shadow-sm bg-gray-500 text-white">CLOSED</span>
             )}
           </div>
           <div>
             {precinctName !== 'Precinct Unknown' && (
-              <p className="text-sm font-bold uppercase tracking-wider mb-2" style={{ color: '#e63946' }}>{precinctName}</p>
+              <p className="text-sm font-bold uppercase tracking-wider mb-2" style={{ color: '#457b9d' }}>{precinctName}</p>
             )}
             <h3 className="text-xl font-black uppercase" style={{ color: '#1d3557' }}>{pollingLocation.address.locationName}</h3>
             <p className="text-sm font-bold mt-1 uppercase" style={{ color: '#457b9d' }}>
@@ -80,7 +80,7 @@ export function PollingPlaceCard({ voterInfo }: PollingPlaceCardProps) {
           </div>
           <button 
             onClick={handleNavigation}
-            className="w-full py-4 mt-2 bg-[#1d3557] rounded-none font-black text-white uppercase shadow-none text-base transition-all duration-300 hover:bg-[#e63946] hover:scale-105 hover:shadow-xl active:scale-95" 
+            className="w-full py-4 mt-2 bg-[#1d3557] rounded-none font-black text-white uppercase shadow-none text-base transition-all duration-300 hover:bg-[#457b9d] hover:text-white hover:scale-105 hover:shadow-xl active:scale-95" 
           >
             Get Directions
           </button>
@@ -93,7 +93,7 @@ export function PollingPlaceCard({ voterInfo }: PollingPlaceCardProps) {
              href="https://okvoterportal.okelections.us/Home"
              target="_blank"
              rel="noopener noreferrer"
-             className="w-full py-4 mt-2 bg-[#1d3557] rounded-none font-black text-center text-white uppercase shadow-none text-base transition-all duration-300 hover:bg-[#e63946] hover:scale-105 hover:shadow-xl active:scale-95 block" 
+             className="w-full py-4 mt-2 bg-[#1d3557] rounded-none font-black text-center text-white uppercase shadow-none text-base transition-all duration-300 hover:bg-[#457b9d] hover:text-white hover:scale-105 hover:shadow-xl active:scale-95 block" 
            >
              OK Voter Portal
            </a>

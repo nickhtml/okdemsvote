@@ -25,11 +25,11 @@ export function BallotView({ voterInfo }: BallotViewProps) {
   // Filter and group candidates
   const groupedCandidates = useMemo(() => {
     const groups: Record<string, { title: string, district: string, color: string, candidates: Candidate[] }> = {
-      statewide: { title: 'STATEWIDE', district: 'NOVEMBER ELECTION', color: '#e63946', candidates: [] },
+      statewide: { title: 'STATEWIDE', district: 'NOVEMBER ELECTION', color: '#457b9d', candidates: [] },
       senate: { title: 'U.S. SENATE', district: 'PRIMARY ELECTION', color: '#2b5ce6', candidates: [] },
       congress: { title: 'U.S. CONGRESS', district: usCongress ? `DISTRICT ${usCongress}` : 'NOVEMBER ELECTION', color: '#2b5ce6', candidates: [] },
-      state_senate: { title: 'STATE SENATE', district: okSenate ? `DISTRICT ${okSenate}` : 'NOVEMBER ELECTION', color: '#e63946', candidates: [] },
-      state_house: { title: 'STATE HOUSE', district: okHouse ? `DISTRICT ${okHouse}` : 'NOVEMBER ELECTION', color: '#e63946', candidates: [] }
+      state_senate: { title: 'STATE SENATE', district: okSenate ? `DISTRICT ${okSenate}` : 'NOVEMBER ELECTION', color: '#457b9d', candidates: [] },
+      state_house: { title: 'STATE HOUSE', district: okHouse ? `DISTRICT ${okHouse}` : 'NOVEMBER ELECTION', color: '#457b9d', candidates: [] }
     };
 
     candidates.forEach((c: Candidate, index: number) => {
@@ -124,8 +124,8 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
         <div 
           className={`w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center font-bold text-3xl text-white overflow-hidden bg-cover bg-center border-2 transition-all duration-300 ${
             isExpanded 
-              ? "border-[#e63946] ring-4 ring-[#e63946]/50 scale-105" 
-              : "border-black group-hover:border-[#e63946] group-hover:ring-4 group-hover:ring-[#e63946]/50 group-hover:scale-105"
+              ? "border-[#457b9d] ring-4 ring-[#457b9d]/50 scale-105" 
+              : "border-black group-hover:border-[#457b9d] group-hover:ring-4 group-hover:ring-[#457b9d]/50 group-hover:scale-105"
           }`}
           style={{ 
             backgroundColor: '#1d3557',
@@ -153,9 +153,9 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
               {cleanName}
             </h3>
             
-            {/* Oval Animation */}
+            {/* Rectangle Ballot Box Animation */}
             {hasFinishedPrimary ? (
-              <div className="shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-[100%] border-4 border-black relative overflow-hidden bg-white flex items-center justify-center">
+              <div className="shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-none border-4 border-black relative overflow-hidden bg-white flex items-center justify-center">
                 <motion.svg
                   className="absolute inset-0 w-full h-full text-black opacity-90"
                   viewBox="0 0 100 50"
@@ -165,12 +165,12 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
                   viewport={{ once: false, margin: "-10%" }}
                 >
                   <motion.path
-                    d="M10,25 C20,10 30,40 40,25 C50,10 60,40 70,25 C80,10 90,40 90,25"
+                    d="M5,10 L95,10 L5,25 L95,25 L5,40 L95,40"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    strokeWidth="10"
+                    strokeLinecap="square"
+                    strokeLinejoin="miter"
                     variants={{
                       hidden: { pathLength: 0 },
                       visible: { 
@@ -180,12 +180,11 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
                     }}
                   />
                   <motion.path
-                    d="M15,20 C25,35 35,5 45,20 C55,35 65,5 75,20 C85,35 85,15 85,20"
+                    d="M10,5 L90,45 M90,5 L10,45"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    strokeWidth="8"
+                    strokeLinecap="square"
                     variants={{
                       hidden: { pathLength: 0 },
                       visible: { 
@@ -194,25 +193,10 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
                       }
                     }}
                   />
-                  <motion.path
-                    d="M20,30 C30,15 40,45 50,30 C60,15 70,45 80,30"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    variants={{
-                      hidden: { pathLength: 0 },
-                      visible: { 
-                        pathLength: 1, 
-                        transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } 
-                      }
-                    }}
-                  />
                 </motion.svg>
               </div>
             ) : (
-              <div className="shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-[100%] border-4 border-slate-300 relative overflow-hidden bg-white"></div>
+              <div className="shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-none border-4 border-slate-300 relative overflow-hidden bg-white"></div>
             )}
           </div>
         </div>
@@ -233,7 +217,7 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
               target="_blank" 
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className={`px-4 py-2 font-black text-xs md:text-sm uppercase tracking-widest border-2 transition-all duration-300 hover:scale-105 active:scale-95 hover:!bg-[#e63946] hover:!border-[#e63946] hover:!text-white ${
+              className={`px-4 py-2 font-black text-xs md:text-sm uppercase tracking-widest border-2 transition-all duration-300 hover:scale-105 active:scale-95 hover:!bg-[#457b9d] hover:!border-[#457b9d] hover:!text-white ${
                 isExpanded 
                   ? "border-white text-white" 
                   : "border-black text-black group-hover:border-white group-hover:text-white"

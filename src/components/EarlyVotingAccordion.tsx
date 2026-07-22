@@ -94,7 +94,7 @@ export function EarlyVotingAccordion({ voterInfo }: EarlyVotingAccordionProps) {
             </div>
           ) : matchedSites.length > 0 ? (
             <>
-              <p className="text-sm font-bold uppercase text-[#e63946]">When and where to vote early in {countyName} County</p>
+              <p className="text-sm font-bold uppercase text-[#457b9d]">When and where to vote early in {countyName} County</p>
               {matchedSites.map((site, idx) => (
                 <div key={idx} className="flex flex-col gap-2 mb-4">
                   <div className="p-3 bg-[#f8fafc] border-2 border-[#1d3557] rounded-none">
@@ -119,7 +119,7 @@ export function EarlyVotingAccordion({ voterInfo }: EarlyVotingAccordionProps) {
           ) : (
             <>
               {countyName && (
-                <p className="text-sm font-bold uppercase text-[#e63946]">When and where to vote early in {countyName} County</p>
+                <p className="text-sm font-bold uppercase text-[#457b9d]">When and where to vote early in {countyName} County</p>
               )}
               <div className="space-y-2">
                 <div className="flex items-start gap-3 p-3 rounded shadow-none border-2 border-[#a8dadc] bg-[#f8fafc]">
@@ -147,7 +147,7 @@ export function EarlyVotingAccordion({ voterInfo }: EarlyVotingAccordionProps) {
                 href="https://hosting.okelections.gov/earlyvote.html" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full py-3 mt-2 bg-[#1d3557] rounded-none font-black text-center text-white uppercase shadow-none text-xs transition-all duration-300 hover:bg-[#e63946] hover:scale-105 active:scale-95 block" 
+                className="w-full py-3 mt-2 bg-[#1d3557] rounded-none font-black text-center text-white uppercase shadow-none text-xs transition-all duration-300 hover:bg-[#457b9d] hover:text-white hover:scale-105 active:scale-95 block" 
               >
                 Find Early Voting Locations
               </a>

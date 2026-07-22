@@ -28,14 +28,14 @@ export function IdAccordion() {
               "United States Military Identification"
             ].map((idType, idx) => (
               <div key={idx} className="flex items-center gap-3 p-3 rounded shadow-none border-2" style={{ borderColor: '#a8dadc', backgroundColor: '#f8fafc' }}>
-                <div className="w-5 h-5 flex items-center justify-center shrink-0" style={{ backgroundColor: '#1fb976' }}>
+                <div className="w-5 h-5 flex items-center justify-center shrink-0" style={{ backgroundColor: '#457b9d' }}>
                   <span className="text-white text-xs font-black">✓</span>
                 </div>
                 <span className="text-xs font-bold tracking-wide uppercase">{idType}</span>
               </div>
             ))}
           </div>
-          <div className="p-4 mt-2 rounded-none text-xs font-bold leading-tight text-center uppercase" style={{ backgroundColor: '#e63946', color: '#ffffff' }}>
+          <div className="p-4 mt-2 rounded-none text-xs font-black leading-tight text-center uppercase" style={{ backgroundColor: '#457b9d', color: '#ffffff' }}>
             <strong>Lacking ID?</strong><br/><span className="opacity-90">Your Voter Registration Card is also valid!</span>
           </div>
         </div>

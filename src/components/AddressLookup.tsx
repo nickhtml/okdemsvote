@@ -67,7 +67,7 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
 
   return (
     <div className="w-full max-w-xl mx-auto p-8 rounded-2xl shadow-xl flex flex-col items-center text-center relative overflow-visible" style={{ backgroundColor: '#ffffff', border: '2px solid #1d3557' }}>
-      <div className="absolute top-0 left-0 w-full h-2 rounded-t-[14px]" style={{ backgroundColor: '#e63946' }}></div>
+      <div className="absolute top-0 left-0 w-full h-2 rounded-t-[14px]" style={{ backgroundColor: '#457b9d' }}></div>
       
       {/* Animation of person casting a ballot */}
       <div className="relative w-24 h-24 mb-6">
@@ -91,7 +91,7 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
           }}
         >
           <div className="w-full h-full p-1 flex flex-col gap-0.5">
-            <div className="w-full h-0.5 bg-[#e63946]"></div>
+            <div className="w-full h-0.5 bg-[#457b9d]"></div>
             <div className="w-3/4 h-0.5 bg-[#1d3557]"></div>
             <div className="w-1/2 h-0.5 bg-[#1d3557]"></div>
           </div>
@@ -149,7 +149,7 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
         </div>
         
         {error && (
-          <div className="p-3 rounded text-sm font-bold text-left shadow-inner flex items-start gap-2 relative z-10" style={{ backgroundColor: '#fee2e2', color: '#e63946', border: '1px solid #fca5a5' }}>
+          <div className="p-3 rounded text-sm font-bold text-left shadow-inner flex items-start gap-2 relative z-10" style={{ backgroundColor: '#fffbe3', color: '#92400e', border: '1px solid #fde68a' }}>
             <span className="shrink-0 mt-0.5">⚠️</span>
             <span>{error}</span>
           </div>
@@ -166,7 +166,7 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
           style={{ backgroundColor: '#1d3557' }}
         >
           <span className={cn(
-            "absolute inset-0 border-4 rounded-lg transition-all duration-300 pointer-events-none opacity-0 ring-4 ring-[#1fb976] ring-offset-2 ring-offset-white",
+            "absolute inset-0 border-4 rounded-lg transition-all duration-300 pointer-events-none opacity-0 ring-4 ring-[#457b9d] ring-offset-2 ring-offset-white",
             !isLoading && "group-hover:opacity-100 group-hover:animate-pulse"
           )}></span>
           {isLoading ? 'Searching...' : "Let's do this"}
@@ -177,7 +177,7 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
         <button 
           onClick={onRegisterClick}
           className="mt-6 text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
-          style={{ color: '#e63946' }}
+          style={{ color: '#457b9d' }}
         >
           Not registered to vote? <br />Register today!
         </button>
