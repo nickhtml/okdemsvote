@@ -113,8 +113,8 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
     <div 
       className={`flex flex-col p-4 md:p-6 relative group transition-all duration-300 cursor-pointer ${
         isExpanded 
-          ? "bg-[#1d3557] -translate-y-2 shadow-xl" 
-          : "bg-white hover:-translate-y-2 hover:shadow-xl hover:bg-[#1d3557]"
+          ? "bg-[#1d3557] -translate-y-1 shadow-xl" 
+          : "bg-white hover:bg-[#f0f4f8] hover:-translate-y-1 hover:shadow-md"
       }`}
       onClick={() => setIsExpanded(!isExpanded)}
     >
@@ -125,7 +125,7 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
           className={`w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center font-bold text-3xl text-white overflow-hidden bg-cover bg-center border-2 transition-all duration-300 ${
             isExpanded 
               ? "border-[#457b9d] ring-4 ring-[#457b9d]/50 scale-105" 
-              : "border-black group-hover:border-[#457b9d] group-hover:ring-4 group-hover:ring-[#457b9d]/50 group-hover:scale-105"
+              : "border-[#1d3557] group-hover:scale-105"
           }`}
           style={{ 
             backgroundColor: '#1d3557',
@@ -139,7 +139,7 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
         <div className="flex-1 min-w-0 flex flex-col justify-center h-24 md:h-32">
           {isStatewide && (
             <p className={`text-xs md:text-sm font-bold uppercase tracking-widest mb-1 transition-colors ${
-              isExpanded ? "text-[#a8dadc]" : "text-slate-500 group-hover:text-[#a8dadc]"
+              isExpanded ? "text-[#a8dadc]" : "text-[#457b9d]"
             }`}>
               {candidate.district}
             </p>
@@ -148,16 +148,18 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
             <h3 className={`text-2xl md:text-4xl font-black uppercase tracking-tighter transition-all duration-300 origin-left ${
               isExpanded 
                 ? "text-white translate-x-2 scale-[1.02]" 
-                : "text-black group-hover:text-white group-hover:translate-x-2 group-hover:scale-[1.02]"
+                : "text-[#1d3557] group-hover:translate-x-2 group-hover:scale-[1.02]"
             }`}>
               {cleanName}
             </h3>
             
             {/* Rectangle Ballot Box Animation */}
             {hasFinishedPrimary ? (
-              <div className="shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-none border-4 border-black relative overflow-hidden bg-white flex items-center justify-center">
+              <div className={`shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-none border-4 relative overflow-hidden bg-white flex items-center justify-center ${
+                isExpanded ? "border-white text-white" : "border-[#1d3557] text-[#1d3557]"
+              }`}>
                 <motion.svg
-                  className="absolute inset-0 w-full h-full text-black opacity-90"
+                  className="absolute inset-0 w-full h-full opacity-90"
                   viewBox="0 0 100 50"
                   preserveAspectRatio="none"
                   initial="hidden"
@@ -196,7 +198,9 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
                 </motion.svg>
               </div>
             ) : (
-              <div className="shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-none border-4 border-slate-300 relative overflow-hidden bg-white"></div>
+              <div className={`shrink-0 w-12 h-6 md:w-16 md:h-8 rounded-none border-4 relative overflow-hidden bg-white ${
+                isExpanded ? "border-[#a8dadc]" : "border-slate-300"
+              }`}></div>
             )}
           </div>
         </div>
@@ -209,7 +213,7 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
           : "max-h-32 opacity-100 mt-4 md:mt-0 md:max-h-0 md:opacity-0 md:group-hover:max-h-32 md:group-hover:opacity-100 md:group-hover:mt-6"
       }`}>
         <div className={`pt-4 border-t-2 flex gap-4 transition-colors ${
-          isExpanded ? "border-[#a8dadc]/30" : "border-slate-200 group-hover:border-[#a8dadc]/30"
+          isExpanded ? "border-[#a8dadc]/30" : "border-slate-200"
         }`}>
           {hasWebsite && (
             <a 
@@ -217,10 +221,10 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
               target="_blank" 
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className={`px-4 py-2 font-black text-xs md:text-sm uppercase tracking-widest border-2 transition-all duration-300 hover:scale-105 active:scale-95 hover:!bg-[#457b9d] hover:!border-[#457b9d] hover:!text-white ${
+              className={`px-4 py-2 font-black text-xs md:text-sm uppercase tracking-widest border-2 transition-all duration-300 hover:scale-105 active:scale-95 ${
                 isExpanded 
-                  ? "border-white text-white" 
-                  : "border-black text-black group-hover:border-white group-hover:text-white"
+                  ? "border-white text-white hover:bg-white hover:text-[#1d3557]" 
+                  : "border-[#1d3557] text-[#1d3557] hover:bg-[#1d3557] hover:text-white"
               }`}
             >
               Website
