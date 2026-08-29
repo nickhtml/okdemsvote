@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
 import { VoterInfo } from '../types';
 import { IdAccordion } from './IdAccordion';
@@ -66,7 +66,7 @@ export function VoterPortal() {
         <div className="w-full bg-[#457b9d] text-white py-2 px-2 md:px-4 flex justify-between items-center z-20 text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-wider relative">
           <div className="flex-1 text-center pr-6 overflow-hidden whitespace-nowrap text-ellipsis">
             <span className="font-black mr-1 md:mr-2">ELECTION ALERT:</span> 
-            Oklahoma Primary Runoff is August 25, 2026!
+            Oklahoma General Election is November 3, 2026!
           </div>
           <button onClick={() => setShowAlert(false)} className="opacity-80 hover:opacity-100 absolute right-2 md:right-4 font-black p-1 cursor-pointer">
             ✕

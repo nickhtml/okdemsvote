@@ -26,7 +26,7 @@ export function BallotView({ voterInfo }: BallotViewProps) {
   const groupedCandidates = useMemo(() => {
     const groups: Record<string, { title: string, district: string, color: string, candidates: Candidate[] }> = {
       statewide: { title: 'STATEWIDE', district: 'NOVEMBER ELECTION', color: '#457b9d', candidates: [] },
-      senate: { title: 'U.S. SENATE', district: 'PRIMARY ELECTION', color: '#2b5ce6', candidates: [] },
+      senate: { title: 'U.S. SENATE', district: 'NOVEMBER ELECTION', color: '#2b5ce6', candidates: [] },
       congress: { title: 'U.S. CONGRESS', district: usCongress ? `DISTRICT ${usCongress}` : 'NOVEMBER ELECTION', color: '#2b5ce6', candidates: [] },
       state_senate: { title: 'STATE SENATE', district: okSenate ? `DISTRICT ${okSenate}` : 'NOVEMBER ELECTION', color: '#457b9d', candidates: [] },
       state_house: { title: 'STATE HOUSE', district: okHouse ? `DISTRICT ${okHouse}` : 'NOVEMBER ELECTION', color: '#457b9d', candidates: [] }
@@ -39,22 +39,22 @@ export function BallotView({ voterInfo }: BallotViewProps) {
         groups.senate.candidates.push(c);
       } else if (d.includes('congress')) {
         if (!usCongress || d.includes(usCongress)) groups.congress.candidates.push(c);
-      } else if (index >= 14 && index <= 34) {
-        // State Senate (Indices 14-34 in candidates.ts)
+      } else if (index >= 13 && index <= 33) {
+        // State Senate (Indices 13-33 in candidates.ts)
         const distMatch = d.match(/\d+/);
         const distNum = distMatch ? distMatch[0] : null;
         if (!okSenate || (distNum && distNum === okSenate)) {
           groups.state_senate.candidates.push(c);
         }
-      } else if (index >= 35) {
-        // State House (Indices 35+ in candidates.ts)
+      } else if (index >= 34) {
+        // State House (Indices 34+ in candidates.ts)
         const distMatch = d.match(/\d+/);
         const distNum = distMatch ? distMatch[0] : null;
         if (!okHouse || (distNum && distNum === okHouse)) {
           groups.state_house.candidates.push(c);
         }
       } else {
-        // Statewide (Indices 7-13)
+        // Statewide (Indices 6-12)
         groups.statewide.candidates.push(c);
       }
     });
@@ -105,8 +105,7 @@ const CandidateCard: React.FC<{ candidate: Candidate }> = ({ candidate }) => {
   
   const districtStr = candidate.district.toLowerCase();
   const isUSSenate = districtStr === 'u.s. senate' || districtStr === 'us senate';
-  const isHD99 = districtStr.includes('99');
-  const hasFinishedPrimary = !isUSSenate && !isHD99;
+  const hasFinishedPrimary = true;
   const isStatewide = !(isUSSenate || districtStr.includes('congress') || districtStr.includes('district') || districtStr.includes('house') || districtStr.includes('senate'));
 
   return (

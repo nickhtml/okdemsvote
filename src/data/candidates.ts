@@ -6,12 +6,6 @@ export const candidates = [
     "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/4dc1a186-7be9-41ad-8a73-95a6f0f864ef/4dc1a186-7be9-41ad-8a73-95a6f0f864ef.webp?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=114%2C691%2C1149%2C1149&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
   },
   {
-    "name": "Jim Priest",
-    "district": "U.S. Senate",
-    "website": "https://jimpriest.com/?fbclid=IwY2xjawPUohNicmlkETFVT1NJZmhtRWFrTjR0bjdIc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHlMsom8gZweo0bAyHIcIBmnGuOKj6M4emIYJS4fPXC74lQnHRJgk2_3nCNtl&brid=7asfOr--asMFElvC_wJDuQ",
-    "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/df193711-9323-46a2-8a29-09e1c6609e92/df193711-9323-46a2-8a29-09e1c6609e92.jpg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C0%2C400%2C400&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
-  },
-  {
     "name": "John Croisant",
     "district": "U.S. Congress District 1",
     "website": "https://croisantforcongress.com",

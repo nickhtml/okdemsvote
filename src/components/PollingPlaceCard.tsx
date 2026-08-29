@@ -47,8 +47,8 @@ export function PollingPlaceCard({ voterInfo }: PollingPlaceCardProps) {
 
   const isPollsOpen = () => {
     const now = new Date();
-    // Oklahoma Primary Runoff is August 25, 2026.
-    const isElectionDay = now.getFullYear() === 2026 && now.getMonth() === 7 && now.getDate() === 25;
+    // Oklahoma General Election is November 3, 2026.
+    const isElectionDay = now.getFullYear() === 2026 && now.getMonth() === 10 && now.getDate() === 3;
     const currentHour = now.getHours();
     return isElectionDay && currentHour >= 7 && currentHour < 19;
   };

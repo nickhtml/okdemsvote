@@ -21,9 +21,9 @@ export function EarlyVotingAccordion({ voterInfo }: EarlyVotingAccordionProps) {
   const earlyVoteSite = voterInfo.earlyVoteSites?.[0];
 
   useEffect(() => {
-    // Early voting typically begins the Thursday before the election.
-    // Election Day: August 25, 2026. Thursday before: August 20, 2026 8:00 AM.
-    const earlyVotingStart = new Date(2026, 7, 20, 8, 0, 0).getTime();
+    // Early voting for the November General Election begins Wednesday/Thursday before the election.
+    // Election Day: November 3, 2026. Early voting starts: October 28, 2026 8:00 AM.
+    const earlyVotingStart = new Date(2026, 9, 28, 8, 0, 0).getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();

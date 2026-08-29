@@ -18,7 +18,7 @@ export function RegisterToVote() {
     show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 15 } }
   };
 
-  const nextDeadline = new Date('2026-07-31T23:59:59');
+  const nextDeadline = new Date('2026-10-09T23:59:59');
   const [daysRemaining, setDaysRemaining] = useState(0);
   const [showSpecialCases, setShowSpecialCases] = useState(false);
 
@@ -97,28 +97,23 @@ export function RegisterToVote() {
           <div className="shrink-0">
             <h4 className="text-xl md:text-3xl font-black uppercase tracking-wider md:mb-2 flex items-center gap-2 md:gap-4" style={{ color: '#1d3557' }}>
               <Calendar className="w-6 h-6 md:w-10 md:h-10 text-[#457b9d]" />
-              Upcoming Deadlines
+              Upcoming Deadline
             </h4>
             <p className="text-xs md:text-sm font-semibold opacity-80 mt-2 md:mt-4 max-w-sm" style={{ color: '#1d3557' }}>
-              In order to vote in the upcoming elections, you must register to vote by these dates:
+              In order to vote in the November General Election, you must register to vote by this date:
             </p>
           </div>
           
           <div className="flex-1 space-y-4">
             <div className="p-4 bg-white border-2 flex justify-between items-center" style={{ borderColor: '#1d3557' }}>
               <div>
-                <p className="font-black text-xs md:text-sm uppercase tracking-wider" style={{ color: '#457b9d' }}>August 25 Elections</p>
-                <p className="font-bold text-sm md:text-lg" style={{ color: '#1d3557' }}>July 31, 2026</p>
+                <p className="font-black text-xs md:text-sm uppercase tracking-wider" style={{ color: '#457b9d' }}>November 3 General Election</p>
+                <p className="font-bold text-sm md:text-lg" style={{ color: '#1d3557' }}>October 9, 2026</p>
               </div>
               <div className="text-right">
                 <p className="text-2xl md:text-4xl font-black" style={{ color: '#1d3557' }}>{daysRemaining}</p>
                 <p className="text-[10px] md:text-xs font-black uppercase tracking-widest opacity-80" style={{ color: '#1d3557' }}>Days Left</p>
               </div>
-            </div>
-            
-            <div className="p-4 bg-white border-2 opacity-70" style={{ borderColor: '#a8dadc' }}>
-              <p className="font-black text-xs md:text-sm uppercase tracking-wider" style={{ color: '#1d3557' }}>November 3 Elections</p>
-              <p className="font-bold text-sm md:text-lg" style={{ color: '#1d3557' }}>October 9, 2026</p>
             </div>
           </div>
         </motion.div>
@@ -195,10 +190,10 @@ export function RegisterToVote() {
             </p>
             <div className="inline-block bg-white border-2 p-4 mt-2" style={{ borderColor: '#1d3557' }}>
               <p className="text-sm md:text-base font-semibold" style={{ color: '#1d3557' }}>
-                To register for the August 25th elections, you must be born on or before <span className="font-black text-[#457b9d]">July 31, 2008</span>.
+                To vote in the November 3rd General Election, you must be born on or before <span className="font-black text-[#457b9d]">November 3, 2008</span>.
               </p>
               <p className="text-sm font-semibold opacity-80 mt-2" style={{ color: '#1d3557' }}>
-                This means you can register once you turn 17 ½ on <span className="font-bold">January 31, 2026</span>!
+                This means you can register once you turn 17 ½ on <span className="font-bold">May 3, 2026</span>!
               </p>
             </div>
           </div>
