@@ -8,9 +8,10 @@ interface AddressLookupProps {
   isLoading: boolean;
   error: string | null;
   onRegisterClick?: () => void;
+  onMailClick?: () => void;
 }
 
-export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: AddressLookupProps) {
+export function AddressLookup({ onLookup, isLoading, error, onRegisterClick, onMailClick }: AddressLookupProps) {
   const [address, setAddress] = useState('');
   const [predictions, setPredictions] = useState<any[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -67,8 +68,6 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
 
   return (
     <div className="w-full max-w-xl mx-auto p-8 rounded-2xl shadow-xl flex flex-col items-center text-center relative overflow-visible" style={{ backgroundColor: '#ffffff', border: '2px solid #1d3557' }}>
-      <div className="absolute top-0 left-0 w-full h-2 rounded-t-[14px]" style={{ backgroundColor: '#457b9d' }}></div>
-      
       {/* Animation of person casting a ballot */}
       <div className="relative w-24 h-24 mb-6">
         {/* Ballot Box */}
@@ -173,15 +172,29 @@ export function AddressLookup({ onLookup, isLoading, error, onRegisterClick }: A
         </button>
       </form>
 
-      {onRegisterClick && (
-        <button 
-          onClick={onRegisterClick}
-          className="mt-6 text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
-          style={{ color: '#457b9d' }}
-        >
-          Not registered to vote? <br />Register today!
-        </button>
-      )}
+      <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-5 text-center">
+        {onRegisterClick && (
+          <button 
+            onClick={onRegisterClick}
+            className="text-xs md:text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
+            style={{ color: '#457b9d' }}
+          >
+            Register to vote
+          </button>
+        )}
+        {onRegisterClick && onMailClick && (
+          <span className="hidden sm:inline opacity-40" style={{ color: '#457b9d' }}>|</span>
+        )}
+        {onMailClick && (
+          <button 
+            onClick={onMailClick}
+            className="text-xs md:text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
+            style={{ color: '#457b9d' }}
+          >
+            Vote by Mail Guide
+          </button>
+        )}
+      </div>
     </div>
   );
 }

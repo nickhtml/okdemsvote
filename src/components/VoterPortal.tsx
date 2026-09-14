@@ -6,6 +6,7 @@ import { PollingPlaceCard } from './PollingPlaceCard';
 import { BallotView } from './BallotView';
 import { AddressLookup } from './AddressLookup';
 import { RegisterToVote } from './RegisterToVote';
+import { MailInBallot } from './MailInBallot';
 import { LoadingSkeleton } from './LoadingSkeleton';
 
 export function VoterPortal() {
@@ -19,6 +20,7 @@ export function VoterPortal() {
   const navigate = useNavigate();
   const location = useLocation();
   const isRegisterPage = location.pathname === '/register';
+  const isMailPage = location.pathname === '/mail';
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const currentScrollTop = e.currentTarget.scrollTop;
@@ -52,7 +54,7 @@ export function VoterPortal() {
       }
       setVoterInfo(data);
       // Ensure we are on the main page to see the results
-      if (isRegisterPage) navigate('/');
+      if (isRegisterPage || isMailPage) navigate('/');
     } catch (err: any) {
       setError(err.message || 'An error occurred during lookup.');
     } finally {
@@ -73,41 +75,85 @@ export function VoterPortal() {
           </button>
         </div>
       )}
-      <header className={`flex flex-col md:flex-row items-center px-8 shrink-0 shadow-md z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'} ${isRegisterPage ? 'justify-center' : 'justify-between'}`} style={{ backgroundColor: '#1d3557', color: '#f1faee' }}>
-        <Link to="/" onClick={() => { setVoterInfo(null); setError(null); }} className={`flex items-center gap-3 transition-opacity hover:opacity-80 cursor-pointer ${isRegisterPage ? 'mx-auto' : ''}`}>
-          <img src="/okdems_votes.png" alt="OKDEMS VOTES" className={`transition-all duration-300 ${isScrolled ? 'h-8 md:h-12' : 'h-12 md:h-16'}`} onError={(e) => {
-            e.currentTarget.style.display = 'none';
-            if (e.currentTarget.nextElementSibling) {
-              (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
-            }
-          }} />
-          <h1 className="text-2xl font-black tracking-tight uppercase hidden" style={{ fontFamily: 'var(--font-sans)', fontWeight: 900 }}>OKDEMS VOTES</h1>
-        </Link>
-        {!isRegisterPage && (
-          <div className="flex items-center gap-6 mt-4 md:mt-0">
-            {voterInfo ? (
-              <div className="text-right">
-                <p className="text-lg md:text-xl font-black uppercase">
-                  Hey, {voterInfo.normalizedInput?.city || 'Oklahoma'} voter! :)
-                </p>
-              </div>
-            ) : (
-              <div className="text-right">
-                <p className="text-sm font-bold opacity-80 uppercase">Enter Address Below</p>
-              </div>
-            )}
+      <header className={`flex flex-col md:flex-row items-center px-4 md:px-8 shrink-0 shadow-md z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3.5'} justify-between gap-3 md:gap-4`} style={{ backgroundColor: '#1d3557', color: '#f1faee' }}>
+        <div className="flex items-center justify-between w-full md:w-auto">
+          <Link to="/" onClick={() => { setVoterInfo(null); setError(null); }} className="flex items-center gap-3 transition-opacity hover:opacity-80 cursor-pointer">
+            <img src="/okdems_votes.png" alt="OKDEMS VOTES" className={`transition-all duration-300 ${isScrolled ? 'h-8 md:h-11' : 'h-10 md:h-14'}`} onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              if (e.currentTarget.nextElementSibling) {
+                (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
+              }
+            }} />
+            <h1 className="text-2xl font-black tracking-tight uppercase hidden" style={{ fontFamily: 'var(--font-sans)', fontWeight: 900 }}>OKDEMS VOTES</h1>
+          </Link>
+
+          {voterInfo && !isRegisterPage && !isMailPage && (
+            <div className="md:hidden text-right">
+              <p className="text-xs font-black uppercase text-[#a8dadc]">
+                {voterInfo.normalizedInput?.city || 'OK'} Voter
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* Navigation Tabs */}
+        <nav className="flex items-center gap-2 sm:gap-3">
+          <Link
+            to="/"
+            onClick={() => { if (isRegisterPage || isMailPage) setError(null); }}
+            className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
+              location.pathname === '/' 
+                ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
+                : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
+            }`}
+          >
+            On My Ballot
+          </Link>
+          <Link
+            to="/register"
+            className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
+              isRegisterPage 
+                ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
+                : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
+            }`}
+          >
+            Register
+          </Link>
+          <Link
+            to="/mail"
+            className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
+              isMailPage 
+                ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
+                : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
+            }`}
+          >
+            Vote by Mail
+          </Link>
+        </nav>
+
+        {voterInfo && !isRegisterPage && !isMailPage && (
+          <div className="hidden md:block text-right">
+            <p className="text-base font-black uppercase">
+              Hey, {voterInfo.normalizedInput?.city || 'Oklahoma'} voter! :)
+            </p>
           </div>
         )}
       </header>
 
       <div className="flex-1 overflow-y-auto z-0 p-4 md:p-8 flex flex-col justify-between" onScroll={handleScroll}>
-        <div className="max-w-3xl mx-auto w-full flex flex-col gap-6 pb-4">
+        <div className="max-w-4xl mx-auto w-full flex flex-col gap-6 pb-4">
           <Routes>
             <Route path="/" element={
               !voterInfo ? (
                 <div className="w-full pt-4 md:pt-6">
                   <div className={isLoading ? "hidden" : "flex items-center justify-center"}>
-                    <AddressLookup onLookup={handleLookup} isLoading={isLoading} error={error} onRegisterClick={() => navigate('/register')} />
+                    <AddressLookup 
+                      onLookup={handleLookup} 
+                      isLoading={isLoading} 
+                      error={error} 
+                      onRegisterClick={() => navigate('/register')}
+                      onMailClick={() => navigate('/mail')}
+                    />
                   </div>
                   {isLoading && (
                     <LoadingSkeleton />
@@ -123,13 +169,18 @@ export function VoterPortal() {
                     <BallotView voterInfo={voterInfo} />
                   </section>
                   
-                  <section className="w-full flex flex-col items-center justify-center mt-8">
+                  <section className="w-full flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 pt-6 border-t-2 border-[#1d3557]/20">
                     <button 
                       onClick={() => navigate('/register')}
-                      className="text-sm font-bold uppercase tracking-wider transition-opacity hover:opacity-80"
-                      style={{ color: '#457b9d' }}
+                      className="px-5 py-3 border-2 border-[#457b9d] text-[#1d3557] bg-white font-black text-xs md:text-sm uppercase tracking-wider hover:bg-[#457b9d] hover:text-white transition-all shadow-sm"
                     >
-                      Not registered to vote? <br />Register today!
+                      Need to register? Register to vote →
+                    </button>
+                    <button 
+                      onClick={() => navigate('/mail')}
+                      className="px-5 py-3 border-2 border-[#1d3557] text-[#1d3557] bg-white font-black text-xs md:text-sm uppercase tracking-wider hover:bg-[#1d3557] hover:text-white transition-all shadow-sm"
+                    >
+                      Want to vote from home? Mail-in guide →
                     </button>
                   </section>
                 </>
@@ -140,12 +191,19 @@ export function VoterPortal() {
                 <RegisterToVote />
               </div>
             } />
+            <Route path="/mail" element={
+              <div className="w-full pt-4 md:pt-8">
+                <MailInBallot />
+              </div>
+            } />
           </Routes>
         </div>
 
         <footer className="w-full mt-auto py-6 px-4 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest border-t border-[#a8dadc]/30" style={{ color: '#1d3557' }}>
           <span className="mb-4 md:mb-0 text-center md:text-left">Paid for and authorized by the Oklahoma Democratic Party © {new Date().getFullYear()}</span>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4 md:mb-0">
+            <Link to="/register" className="hover:underline" style={{ color: '#457b9d' }}>Register to Vote</Link>
+            <Link to="/mail" className="hover:underline" style={{ color: '#457b9d' }}>Vote by Mail</Link>
             <a href="mailto:digitools@okdemocrats.org" className="hover:underline" style={{ color: '#457b9d' }}>Report Issue</a>
             <a href="https://www.okdemocrats.org/Terms-Policies" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#457b9d' }}>Privacy Policy</a>
           </div>

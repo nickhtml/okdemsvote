@@ -15,8 +15,9 @@ export function EarlyVotingAccordion({ voterInfo }: EarlyVotingAccordionProps) {
   const rawCounty = countyDivId ? voterInfo.divisions[countyDivId].name : "";
   const countyNameMatch = countyDivId?.match(/county:([^\/]+)/);
   const countyName = rawCounty.replace(/ county/i, '').trim() || (countyNameMatch ? countyNameMatch[1].replace(/_/g, ' ') : "");
-  const countyKey = countyNameMatch ? countyNameMatch[1].replace(/_/g, ' ').toLowerCase() : "";
-  const matchedSites = earlyVotingData[countyKey] || [];
+  const normalizedKey = countyName.toLowerCase().trim();
+  const rawKey = countyNameMatch ? countyNameMatch[1].replace(/_/g, ' ').toLowerCase().trim() : "";
+  const matchedSites = earlyVotingData[normalizedKey] || earlyVotingData[rawKey] || earlyVotingData[normalizedKey.replace(/\s+/g, '')] || [];
 
   const earlyVoteSite = voterInfo.earlyVoteSites?.[0];
 
@@ -127,7 +128,7 @@ export function EarlyVotingAccordion({ voterInfo }: EarlyVotingAccordionProps) {
                     <span className="text-white text-xs font-black">🗓️</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xs font-black tracking-wide uppercase">Thursday & Friday</span>
+                    <span className="text-xs font-black tracking-wide uppercase">Wednesday, Thursday & Friday</span>
                     <span className="text-xs font-bold opacity-80">8:00 AM — 6:00 PM</span>
                   </div>
                 </div>
