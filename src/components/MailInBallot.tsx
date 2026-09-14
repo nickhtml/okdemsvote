@@ -20,8 +20,8 @@ export function MailInBallot() {
 
   // Request deadline: Monday, Oct 19, 2026 at 5:00 PM (15 days before Nov 3)
   const requestDeadline = new Date('2026-10-19T17:00:00');
-  // Election day deadline for mail receipt: Tuesday, Nov 3, 2026 at 7:00 PM
-  const returnDeadline = new Date('2026-11-03T19:00:00');
+  // Election day deadline for mail receipt: Tuesday, Nov 3, 2026 at 5:00 PM
+  const returnDeadline = new Date('2026-11-03T17:00:00');
 
   const [daysToRequest, setDaysToRequest] = useState(0);
   const [daysToReturn, setDaysToReturn] = useState(0);
@@ -82,7 +82,7 @@ export function MailInBallot() {
             If you become hospitalized or confined to bed due to a physical illness or accident occurring <strong>after 5:00 PM on October 19, 2026</strong> (the standard request deadline), you can still vote using an Emergency Absentee Ballot.
           </p>
           <ul className="list-disc list-inside space-y-1 text-slate-600 pl-1">
-            <li><strong>Deadline:</strong> Requests can be submitted up until <strong>7:00 PM on Election Day</strong> (November 3, 2026).</li>
+            <li><strong>Deadline:</strong> Requests can be submitted up until <strong>5:00 PM on Election Day</strong> (November 3, 2026).</li>
             <li><strong>Authorized Agent:</strong> An authorized agent (friend, neighbor, or family member over 18) may deliver your application, retrieve your ballot from the County Election Board, and return it.</li>
             <li><strong>Two Witnesses:</strong> Requires signatures from your attending physician or medical facility and two witnesses (no notary required).</li>
           </ul>
@@ -125,6 +125,10 @@ export function MailInBallot() {
 
   const faqs = [
     {
+      q: "Must my voter registration be active before I request an absentee ballot?",
+      a: "Yes! Your Oklahoma voter registration must be active BEFORE you submit an absentee ballot request. If you are registering for the first time or updating your address or name, your registration application must be submitted by the October 9, 2026 voter registration deadline and processed by your County Election Board before your absentee request can be approved."
+    },
+    {
       q: "Do I need an excuse or special reason to vote by mail?",
       a: "No! Oklahoma is a 'no-excuse' absentee voting state. Any registered Oklahoma voter can request an absentee ballot to vote by mail for any reason."
     },
@@ -159,16 +163,35 @@ export function MailInBallot() {
     >
       {/* Header */}
       <motion.div variants={itemVariants} className="text-center flex flex-col gap-3">
-        <div className="inline-flex items-center justify-center gap-2 self-center px-4 py-1.5 bg-[#457b9d]/10 border-2 border-[#457b9d] text-[#1d3557] text-xs md:text-sm font-black uppercase tracking-wider">
-          <Mail className="w-4 h-4 text-[#457b9d]" />
-          Oklahoma Absentee Voting Guide
-        </div>
         <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase" style={{ color: '#1d3557' }}>
           Vote by <span style={{ color: '#457b9d' }}>Mail</span>
         </h2>
         <p className="text-base md:text-xl font-bold opacity-85 max-w-2xl mx-auto" style={{ color: '#457b9d' }}>
-          Every registered Oklahoma voter is eligible to vote by mail. Here is everything you need to know to request, complete, and return your ballot for November 3, 2026.
+          Your voter registration must be active before you can request an absentee ballot. Every registered Oklahoma voter is eligible to vote by mail. Here is everything you need to know to request, complete, and return your ballot for November 3, 2026.
         </p>
+      </motion.div>
+
+      {/* Active Voter Registration Prerequisite Notice */}
+      <motion.div variants={itemVariants} className="p-4 md:p-5 bg-white border-4 border-[#1d3557] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
+        <div className="flex items-start sm:items-center gap-3.5">
+          <div className="w-10 h-10 bg-[#1d3557] text-white flex items-center justify-center font-black text-xl shrink-0">
+            !
+          </div>
+          <div>
+            <h4 className="text-sm md:text-base font-black uppercase tracking-tight text-[#1d3557]">
+              Voter Registration Must Be Active First
+            </h4>
+            <p className="text-xs md:text-sm font-semibold text-slate-700 mt-0.5">
+              You must have an <strong>active voter registration</strong> before your County Election Board can issue an absentee ballot. If you need to register or update your voter registration address, the deadline is <strong>Friday, October 9, 2026</strong>.
+            </p>
+          </div>
+        </div>
+        <Link
+          to="/register"
+          className="px-4 py-2.5 bg-[#457b9d] hover:bg-[#1d3557] text-white text-xs font-black uppercase tracking-wider transition-colors shrink-0 text-center self-stretch sm:self-auto"
+        >
+          Check / Register →
+        </Link>
       </motion.div>
 
       {/* Action Buttons & Fast Links */}
@@ -289,9 +312,9 @@ export function MailInBallot() {
                 <span className="text-xs font-black text-[#1d3557]">{daysToReturn} Days Left</span>
               </div>
               <p className="text-xl font-black text-[#1d3557]">Nov. 3, 2026</p>
-              <p className="text-xs font-bold text-[#457b9d] uppercase">7:00 PM Receipt</p>
+              <p className="text-xs font-bold text-[#457b9d] uppercase">5:00 PM Receipt</p>
               <p className="text-xs font-semibold text-slate-700 mt-2">
-                Ballot must be <span className="font-bold underline">received</span> by your County Election Board by 7 PM. Postmarks do not count!
+                Ballot must be <span className="font-bold underline">received</span> by your County Election Board by 5 PM. Postmarks do not count!
               </p>
             </div>
           </div>
@@ -300,7 +323,7 @@ export function MailInBallot() {
         <div className="mt-4 p-3 bg-amber-50 border-2 border-amber-300 flex items-start gap-3">
           <AlertTriangle className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
           <p className="text-xs font-bold text-amber-900 leading-relaxed">
-            <span className="uppercase font-black">Mail Your Ballot Early:</span> The USPS recommends mailing your completed absentee ballot at least <span className="underline">7 to 10 days</span> prior to Election Day (by October 26) to ensure it reaches your County Election Board before 7:00 PM on November 3!
+            <span className="uppercase font-black">Mail Your Ballot Early:</span> The USPS recommends mailing your completed absentee ballot at least <span className="underline">7 to 10 days</span> prior to Election Day (by October 26) to ensure it reaches your County Election Board before 5:00 PM on November 3!
           </p>
         </div>
       </motion.div>
@@ -319,7 +342,7 @@ export function MailInBallot() {
             </div>
             <h4 className="text-xl font-black uppercase text-[#1d3557]">Request Your Ballot</h4>
             <p className="text-sm font-semibold text-slate-700 leading-relaxed">
-              Submit your request through the <a href="https://okvoterportal.okelections.gov/" target="_blank" rel="noopener noreferrer" className="text-[#457b9d] underline font-bold">OK Voter Portal</a> or mail a paper application to your County Election Board. The deadline is <strong>Monday, October 19, 2026 at 5:00 PM</strong>.
+              <strong>Registration Requirement:</strong> Your Oklahoma voter registration must be <strong>active</strong> before requesting an absentee ballot. If you need to register or update your address, submit your voter registration application before Friday, October 9, 2026. Then submit your ballot request through the <a href="https://okvoterportal.okelections.gov/" target="_blank" rel="noopener noreferrer" className="text-[#457b9d] underline font-bold">OK Voter Portal</a> or mail a paper form to your County Election Board. The absentee request deadline is <strong>Monday, October 19, 2026 at 5:00 PM</strong>.
             </p>
           </div>
 
@@ -382,7 +405,7 @@ export function MailInBallot() {
               Important: Oklahoma Has No Ballot Cure Process
             </h4>
             <p className="text-xs md:text-sm font-medium leading-relaxed opacity-95">
-              Unlike some states, Oklahoma election law does <strong>NOT</strong> provide a procedure to fix or "cure" a rejected absentee ballot once submitted. If you forget to have your affidavit notarized, omit your signature, or return it after 7:00 PM on November 3, your ballot <strong>cannot be counted</strong> and you cannot fix it afterwards. Please take your time and follow every instruction packet step to guarantee your vote is counted!
+              Unlike some states, Oklahoma election law does <strong>NOT</strong> provide a procedure to fix or "cure" a rejected absentee ballot once submitted. If you forget to have your affidavit notarized, omit your signature, or return it after 5:00 PM on November 3, your ballot <strong>cannot be counted</strong> and you cannot fix it afterwards. Please take your time and follow every instruction packet step to guarantee your vote is counted!
             </p>
           </div>
         </div>

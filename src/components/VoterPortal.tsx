@@ -75,10 +75,11 @@ export function VoterPortal() {
           </button>
         </div>
       )}
-      <header className={`flex flex-col md:flex-row items-center px-4 md:px-8 shrink-0 shadow-md z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3.5'} justify-between gap-3 md:gap-4`} style={{ backgroundColor: '#1d3557', color: '#f1faee' }}>
-        <div className="flex items-center justify-between w-full md:w-auto">
-          <Link to="/" onClick={() => { setVoterInfo(null); setError(null); }} className="flex items-center gap-3 transition-opacity hover:opacity-80 cursor-pointer">
-            <img src="/okdems_votes.png" alt="OKDEMS VOTES" className={`transition-all duration-300 ${isScrolled ? 'h-8 md:h-11' : 'h-10 md:h-14'}`} onError={(e) => {
+      <header className={`flex flex-col items-center justify-center px-4 md:px-8 shrink-0 shadow-md z-10 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'} gap-2.5 md:gap-3`} style={{ backgroundColor: '#1d3557', color: '#f1faee' }}>
+        {/* Centered Logo on desktop and mobile */}
+        <div className="w-full flex items-center justify-center">
+          <Link to="/" onClick={() => { setVoterInfo(null); setError(null); }} className="flex items-center justify-center gap-3 transition-opacity hover:opacity-80 cursor-pointer mx-auto">
+            <img src="/okdems_votes.png" alt="OKDEMS VOTES" className={`transition-all duration-300 ${isScrolled ? 'h-8 md:h-11' : 'h-10 md:h-14'} mx-auto`} onError={(e) => {
               e.currentTarget.style.display = 'none';
               if (e.currentTarget.nextElementSibling) {
                 (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
@@ -86,58 +87,50 @@ export function VoterPortal() {
             }} />
             <h1 className="text-2xl font-black tracking-tight uppercase hidden" style={{ fontFamily: 'var(--font-sans)', fontWeight: 900 }}>OKDEMS VOTES</h1>
           </Link>
-
-          {voterInfo && !isRegisterPage && !isMailPage && (
-            <div className="md:hidden text-right">
-              <p className="text-xs font-black uppercase text-[#a8dadc]">
-                {voterInfo.normalizedInput?.city || 'OK'} Voter
-              </p>
-            </div>
-          )}
         </div>
 
-        {/* Navigation Tabs */}
-        <nav className="flex items-center gap-2 sm:gap-3">
-          <Link
-            to="/"
-            onClick={() => { if (isRegisterPage || isMailPage) setError(null); }}
-            className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
-              location.pathname === '/' 
-                ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
-                : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
-            }`}
-          >
-            On My Ballot
-          </Link>
-          <Link
-            to="/register"
-            className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
-              isRegisterPage 
-                ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
-                : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
-            }`}
-          >
-            Register
-          </Link>
-          <Link
-            to="/mail"
-            className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
-              isMailPage 
-                ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
-                : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
-            }`}
-          >
-            Vote by Mail
-          </Link>
-        </nav>
+        {/* Navigation Tabs and Voter Greeting */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+          <nav className="flex items-center justify-center gap-2 sm:gap-3">
+            <Link
+              to="/"
+              onClick={() => { if (isRegisterPage || isMailPage) setError(null); }}
+              className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
+                location.pathname === '/' 
+                  ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
+                  : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
+              }`}
+            >
+              On My Ballot
+            </Link>
+            <Link
+              to="/register"
+              className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
+                isRegisterPage 
+                  ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
+                  : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
+              }`}
+            >
+              Register
+            </Link>
+            <Link
+              to="/mail"
+              className={`px-3 py-1.5 text-xs md:text-sm font-black uppercase tracking-wider transition-all duration-200 border-2 ${
+                isMailPage 
+                  ? 'bg-[#457b9d] text-white border-[#457b9d] shadow-sm' 
+                  : 'bg-transparent text-[#f1faee] border-transparent hover:border-[#a8dadc] hover:bg-white/10'
+              }`}
+            >
+              Vote by Mail
+            </Link>
+          </nav>
 
-        {voterInfo && !isRegisterPage && !isMailPage && (
-          <div className="hidden md:block text-right">
-            <p className="text-base font-black uppercase">
-              Hey, {voterInfo.normalizedInput?.city || 'Oklahoma'} voter! :)
-            </p>
-          </div>
-        )}
+          {voterInfo && !isRegisterPage && !isMailPage && (
+            <span className="text-xs md:text-sm font-black uppercase text-[#a8dadc] tracking-wide sm:ml-2">
+              • Hey, {voterInfo.normalizedInput?.city || 'Oklahoma'} voter! :)
+            </span>
+          )}
+        </div>
       </header>
 
       <div className="flex-1 overflow-y-auto z-0 p-4 md:p-8 flex flex-col justify-between" onScroll={handleScroll}>
