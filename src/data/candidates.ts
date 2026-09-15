@@ -222,6 +222,12 @@ export const candidates = [
     "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/7f9fd949-e877-44ec-98f1-fc06f5142797/7f9fd949-e877-44ec-98f1-fc06f5142797.jpg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C5%2C900%2C900&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
   },
   {
+    "name": "Isaac Mattox",
+    "district": "District 10",
+    "website": "https://electisaac2026.com/",
+    "photoUrl": "/isaac_mattox.webp"
+  },
+  {
     "name": "Tiffany Prater",
     "district": "District 12",
     "website": "https://secure.actblue.com/donate/tiffany-prater-3?refcode=directory",
