@@ -3,6 +3,7 @@ import { VoterInfo, Candidate } from '../types';
 import { candidates } from '../data/candidates';
 import { cn } from '../lib/utils';
 import { motion } from 'motion/react';
+import { StatewideMeasuresSection } from './StatewideMeasuresSection';
 
 interface BallotViewProps {
   voterInfo: VoterInfo;
@@ -92,6 +93,9 @@ export function BallotView({ voterInfo }: BallotViewProps) {
           </div>
         )}
       </div>
+
+      {/* Statewide Ballot Measures & Judicial Retention */}
+      <StatewideMeasuresSection />
     </>
   );
 }

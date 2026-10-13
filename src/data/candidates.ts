@@ -92,7 +92,7 @@ export const candidates = [
   {
     "name": "Patrick Southerland",
     "district": "District 6",
-    "website": "N/A",
+    "website": "https://southerlandforsenate.com",
     "photoUrl": "https://run.imgix.net/b7b32f86-9d88-4109-9f34-0176c332841f/09caa2ce-d9a0-48f1-ac50-4e4bbcc5dc9a/09caa2ce-d9a0-48f1-ac50-4e4bbcc5dc9a.png?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=153%2C57%2C1019%2C1018&auto=compress%2Cformat&fit=fillmax&w=2048&q=75"
   },
   {
