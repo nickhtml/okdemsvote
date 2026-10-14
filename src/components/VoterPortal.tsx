@@ -7,6 +7,7 @@ import { AddressLookup } from './AddressLookup';
 import { RegisterToVote } from './RegisterToVote';
 import { MailInBallot } from './MailInBallot';
 import { LoadingSkeleton } from './LoadingSkeleton';
+import { lookupVoter } from '../lib/voterLookupClient';
 
 export function VoterPortal() {
   const [voterInfo, setVoterInfo] = useState<VoterInfo | null>(null);
@@ -35,24 +36,11 @@ export function VoterPortal() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('/api/voter-lookup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ address })
-      });
-      
-      const data = await response.json().catch(() => ({}));
-      
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to resolve address');
-      }
-      if (data.error) {
-        throw new Error(data.error);
-      }
+      const data = await lookupVoter(address);
       setVoterInfo(data);
       if (isRegisterPage || isMailPage) navigate('/');
     } catch (err: any) {
-      setError(err.message || 'An error occurred during lookup.');
+      setError(err.message || 'Failed to resolve address');
     } finally {
       setIsLoading(false);
     }

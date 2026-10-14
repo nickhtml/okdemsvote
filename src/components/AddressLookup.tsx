@@ -35,10 +35,35 @@ export function AddressLookup({
         const res = await fetch(`/api/address-autocomplete?input=${encodeURIComponent(address)}`);
         if (res.ok) {
           const data = await res.json();
-          setPredictions(data.predictions || []);
+          if (data.predictions && data.predictions.length > 0) {
+            setPredictions(data.predictions);
+            return;
+          }
         }
       } catch (e) {
-        console.error(e);
+        // Fallback to direct ArcGIS geocoder suggest
+      }
+
+      // Direct ArcGIS suggestion fallback for okdems.vote / static hosting
+      try {
+        const arcUrl = `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest?text=${encodeURIComponent(address)}&f=json&countryCode=USA&maxSuggestions=6`;
+        const arcRes = await fetch(arcUrl);
+        if (arcRes.ok) {
+          const arcData = await arcRes.json();
+          const filtered = (arcData.suggestions || [])
+            .filter((s: any) => s.text.includes(', OK') || s.text.includes('Oklahoma'))
+            .map((s: any, idx: number) => ({
+              place_id: s.magicKey || idx,
+              description: s.text,
+              structured_formatting: {
+                main_text: s.text.split(',')[0],
+                secondary_text: s.text.split(',').slice(1).join(',').trim()
+              }
+            }));
+          setPredictions(filtered);
+        }
+      } catch (err) {
+        // ignore
       }
     };
 
@@ -118,7 +143,7 @@ export function AddressLookup({
             onFocus={() => {
               if (address.length >= 3) setShowDropdown(true);
             }}
-            placeholder="e.g. 100 N Broadway Ave, OKC or Precinct 550534"
+            placeholder="e.g. 100 N Broadway Ave, Oklahoma City"
             className="w-full px-5 py-4 rounded-lg text-lg font-bold placeholder:opacity-50 border-2 focus:outline-none focus:ring-4 transition-all relative z-20 bg-[#f1faee] text-[#1d3557]"
             style={{ 
               borderColor: showDropdown && predictions.length > 0 ? '#1d3557' : '#a8dadc'

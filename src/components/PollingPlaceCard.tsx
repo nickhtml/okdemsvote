@@ -144,11 +144,6 @@ export function PollingPlaceCard({ voterInfo, onOpenDirectory }: PollingPlaceCar
 
         {/* Polling Location Details */}
         <div>
-          {precinctName && (
-            <p className="text-xs font-black uppercase tracking-wider text-[#457b9d] mb-1">
-              {precinctName} {countyDisplayName ? `• ${countyDisplayName}` : ''}
-            </p>
-          )}
           <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#1d3557]">
             {pollingLocation.address.locationName}
           </h3>
