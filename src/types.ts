@@ -14,6 +14,9 @@ export interface PollingLocation {
     zip: string;
   };
   pollingHours: string;
+  isFromSpreadsheet?: boolean;
+  precinctCode?: string;
+  county?: string;
 }
 
 export interface Division {
@@ -26,6 +29,9 @@ export interface VoterInfo {
   divisions: Record<string, Division>;
   pollingLocations: PollingLocation[];
   earlyVoteSites?: PollingLocation[];
+  matchedPrecinct?: string;
+  matchedCounty?: string;
+  isSpreadsheetMatch?: boolean;
 }
 
 export interface Candidate {

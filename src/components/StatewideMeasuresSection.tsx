@@ -74,9 +74,6 @@ const StateQuestionCard: React.FC<{ item: StateQuestionItem }> = ({ item }) => {
     <div className="p-4 md:p-6 flex flex-col gap-4 transition-colors hover:bg-slate-50/50">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-3 border-slate-200">
         <div>
-          <span className="text-xs font-black uppercase tracking-wider text-[#e63946] block">
-            {item.referendum}
-          </span>
           <h4 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#1d3557]">
             {item.number}
           </h4>

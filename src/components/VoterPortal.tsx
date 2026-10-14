@@ -1,7 +1,6 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef, UIEvent } from 'react';
 import { Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
 import { VoterInfo } from '../types';
-import { IdAccordion } from './IdAccordion';
 import { PollingPlaceCard } from './PollingPlaceCard';
 import { BallotView } from './BallotView';
 import { AddressLookup } from './AddressLookup';
@@ -22,13 +21,11 @@ export function VoterPortal() {
   const isRegisterPage = location.pathname === '/register';
   const isMailPage = location.pathname === '/mail';
 
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+  const handleScroll = (e: UIEvent<HTMLDivElement>) => {
     const currentScrollTop = e.currentTarget.scrollTop;
     if (currentScrollTop > lastScrollTop.current && currentScrollTop > 20) {
-      // Scrolling down
       setIsScrolled(true);
     } else if (currentScrollTop < lastScrollTop.current) {
-      // Scrolling up
       setIsScrolled(false);
     }
     lastScrollTop.current = currentScrollTop;
@@ -53,7 +50,6 @@ export function VoterPortal() {
         throw new Error(data.error);
       }
       setVoterInfo(data);
-      // Ensure we are on the main page to see the results
       if (isRegisterPage || isMailPage) navigate('/');
     } catch (err: any) {
       setError(err.message || 'An error occurred during lookup.');
@@ -155,7 +151,9 @@ export function VoterPortal() {
               ) : (
                 <>
                   <section className="w-full flex flex-col gap-4">
-                    <PollingPlaceCard voterInfo={voterInfo} />
+                    <PollingPlaceCard 
+                      voterInfo={voterInfo} 
+                    />
                   </section>
                   
                   <section className="w-full flex flex-col gap-4">
