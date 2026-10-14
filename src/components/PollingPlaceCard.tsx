@@ -4,6 +4,7 @@ import { EarlyVotingAccordion } from './EarlyVotingAccordion';
 import { getPollingPlaceForPrecinct } from '../data/polling_places';
 import { earlyVotingData } from '../data/early_voting';
 import { MapPin, Navigation } from 'lucide-react';
+import { PollingPlaceMap } from './PollingPlaceMap';
 
 interface PollingPlaceCardProps {
   voterInfo: VoterInfo;
@@ -111,10 +112,20 @@ export function PollingPlaceCard({ voterInfo, onOpenDirectory }: PollingPlaceCar
     return isElectionDay && currentHour >= 7 && currentHour < 19;
   };
 
-  const navAddress = pollingLocation ? 
-    `${pollingLocation.address.locationName ? pollingLocation.address.locationName + ', ' : ''}${pollingLocation.address.line1}, ${pollingLocation.address.city}, ${pollingLocation.address.state} ${pollingLocation.address.zip}` 
+  const voterAddressString = voterInfo.normalizedInput ? 
+    `${voterInfo.normalizedInput.line1}, ${voterInfo.normalizedInput.city}, ${voterInfo.normalizedInput.state} ${voterInfo.normalizedInput.zip}`.trim() 
     : '';
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(navAddress)}`;
+  const pollingAddressString = pollingLocation ? 
+    `${pollingLocation.address.line1}, ${pollingLocation.address.city}, ${pollingLocation.address.state} ${pollingLocation.address.zip}`.trim()
+    : '';
+
+  const navAddress = pollingLocation ? 
+    `${pollingLocation.address.locationName ? pollingLocation.address.locationName + ', ' : ''}${pollingAddressString}` 
+    : '';
+
+  const directionsUrl = voterAddressString && navAddress ?
+    `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(voterAddressString)}&destination=${encodeURIComponent(navAddress)}`
+    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(navAddress)}`;
 
   return (
     <div className="w-full flex flex-col gap-4">
@@ -143,15 +154,25 @@ export function PollingPlaceCard({ voterInfo, onOpenDirectory }: PollingPlaceCar
         </div>
 
         {/* Polling Location Details */}
-        <div>
+        <div className="flex flex-col gap-2">
           <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-[#1d3557]">
             {pollingLocation.address.locationName}
           </h3>
+
+          {/* Interactive Map right under the name of the polling place */}
+          <PollingPlaceMap
+            homeAddress={voterAddressString}
+            pollingLocationName={pollingLocation.address.locationName}
+            pollingAddress={pollingAddressString}
+            homeCoords={voterInfo.voterCoordinates}
+            pollingCoords={pollingLocation.coordinates}
+          />
+
           <p className="text-base md:text-lg font-bold mt-1 uppercase text-[#457b9d]">
             {pollingLocation.address.line1}<br/>
             {pollingLocation.address.city}, {pollingLocation.address.state} {pollingLocation.address.zip}
           </p>
-          <div className="mt-3 flex items-center gap-2 text-xs md:text-sm font-black uppercase text-[#1d3557]/80">
+          <div className="mt-1 flex items-center gap-2 text-xs md:text-sm font-black uppercase text-[#1d3557]/80">
             <span>⏰ Election Day Voting Hours: 7:00 AM - 7:00 PM</span>
           </div>
         </div>

@@ -83,7 +83,10 @@ async function resolveOklahomaPrecinct(address: string, mapsKey?: string) {
       const arcRes = await fetch(arcgisUrl, { signal: AbortSignal.timeout(4000) });
       if (arcRes.ok) {
         const arcData = await arcRes.json();
-        return arcData.features?.[0]?.attributes;
+        return {
+          attributes: arcData.features?.[0]?.attributes,
+          coordinates: { lat, lng }
+        };
       }
     }
   } catch (e) {
@@ -195,8 +198,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
     }
 
+    let voterCoords: { lat: number; lng: number } | undefined;
     if (!okPrecinct) {
-      okPrecinct = await resolveOklahomaPrecinct(trimmedInput, mapsKey);
+      const resolvedGis = await resolveOklahomaPrecinct(trimmedInput, mapsKey);
+      okPrecinct = resolvedGis?.attributes || null;
+      voterCoords = resolvedGis?.coordinates;
     }
 
     let isSpreadsheetMatch = false;
@@ -273,7 +279,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       earlyVoteSites,
       matchedPrecinct: matchedPrecinctCode,
       matchedCounty: matchedCountyName,
-      isSpreadsheetMatch
+      isSpreadsheetMatch,
+      voterCoordinates: voterCoords
     });
   } catch (error: any) {
     console.error(error);

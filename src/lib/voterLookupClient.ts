@@ -70,12 +70,13 @@ async function resolveVoterClientSide(rawAddress: string): Promise<VoterInfo> {
   let normalizedCity = "Oklahoma";
   let normalizedZip = "";
   let normalizedLine = trimmedInput;
+  let coords: { lat: number; lng: number; formatted?: string } | null = null;
 
   if (isDirectPrecinct) {
     okPrecinct = await queryArcGISPrecinctDirect(trimmedInput);
   } else {
     // Resolve lat/lng coordinates
-    const coords = await resolveOklahomaCoordinates(trimmedInput);
+    coords = await resolveOklahomaCoordinates(trimmedInput);
     if (coords) {
       if (coords.formatted) {
         normalizedLine = coords.formatted;
@@ -210,7 +211,8 @@ async function resolveVoterClientSide(rawAddress: string): Promise<VoterInfo> {
     pollingLocations,
     matchedPrecinct: matchedPrecinctCode,
     matchedCounty: matchedCountyName,
-    isSpreadsheetMatch
+    isSpreadsheetMatch,
+    voterCoordinates: coords ? { lat: coords.lat, lng: coords.lng } : undefined
   };
 }
 

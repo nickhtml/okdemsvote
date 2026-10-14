@@ -5,6 +5,11 @@ export interface NormalizedInput {
   zip: string;
 }
 
+export interface Coordinates {
+  lat: number;
+  lng: number;
+}
+
 export interface PollingLocation {
   address: {
     locationName: string;
@@ -17,6 +22,7 @@ export interface PollingLocation {
   isFromSpreadsheet?: boolean;
   precinctCode?: string;
   county?: string;
+  coordinates?: Coordinates;
 }
 
 export interface Division {
@@ -32,6 +38,7 @@ export interface VoterInfo {
   matchedPrecinct?: string;
   matchedCounty?: string;
   isSpreadsheetMatch?: boolean;
+  voterCoordinates?: Coordinates;
 }
 
 export interface Candidate {
